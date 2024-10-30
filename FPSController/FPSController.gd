@@ -66,7 +66,7 @@ var old_vel : float = 0.0
 @onready var player_hp_hud = $playerHudElements/Control/MarginContainer/LeftSideUI/playerHP
 
 #Variable for defining the mouse focus state
-@onready var Pausemenu = $PauseMenu
+@onready var Pausemenu = $playerHudElements/PauseMenu
 var isMouseVisible = false
 
 func get_move_speed() -> float:

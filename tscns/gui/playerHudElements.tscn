@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://3syfwb4b44pi"]
+[gd_scene load_steps=9 format=3 uid="uid://3syfwb4b44pi"]
 
 [ext_resource type="FontFile" uid="uid://beyxefwb8hwdn" path="res://ZTGatha/ZTGatha-SemiBold.ttf" id="1_b2l4f"]
+[ext_resource type="PackedScene" uid="uid://bwfoh1p1welfl" path="res://tscns/gui/pause_menu.tscn" id="1_s6t21"]
+[ext_resource type="PackedScene" uid="uid://bkgg4jqh8fajx" path="res://tscns/scene_transition.tscn" id="1_wcgtw"]
+[ext_resource type="PackedScene" uid="uid://d0jo4itx2s7hb" path="res://tscns/gui/death_screen.tscn" id="3_oqqga"]
 
 [sub_resource type="Animation" id="Animation_4ouvh"]
 length = 0.001
@@ -56,6 +59,8 @@ _data = {
 
 [node name="playerHudElements" type="CanvasLayer"]
 follow_viewport_enabled = true
+
+[node name="SceneTransition" parent="." instance=ExtResource("1_wcgtw")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -128,6 +133,10 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_b2l4f")
 theme_override_font_sizes/font_size = 32
 text = "0"
+
+[node name="DeathScreen" parent="." instance=ExtResource("3_oqqga")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_s6t21")]
 
 [node name="hud-animations" type="AnimationPlayer" parent="."]
 libraries = {
