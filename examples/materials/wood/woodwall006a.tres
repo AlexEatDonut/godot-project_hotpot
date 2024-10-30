@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://crks720shjw61"]
+
+[ext_resource type="Texture2D" uid="uid://dibd3d0tnath4" path="res://examples/materials/wood/woodwall006a.texture.tres" id="1_erwfw"]
+[ext_resource type="Texture2D" uid="uid://bbp2lkoxkak1r" path="res://examples/materials/wood/woodwall006a_normal.texture.tres" id="2_poqid"]
+
+[resource]
+albedo_texture = ExtResource("1_erwfw")
+emission = Color(1, 1, 1, 1)
+normal_enabled = true
+normal_texture = ExtResource("2_poqid")
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

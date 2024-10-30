@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ce270vxfcjxdb"]
+
+[ext_resource type="Texture2D" uid="uid://bjmcq71nf838n" path="res://examples/materials/metal/metalwall001b.texture.tres" id="1_yrdbx"]
+[ext_resource type="Texture2D" uid="uid://ctd3nfgv7oi40" path="res://examples/materials/detail/metal_detail_01.texture.tres" id="2_cawk8"]
+[ext_resource type="Texture2D" uid="uid://bfbt4axshnmxu" path="res://examples/materials/metal/metalwall001b_normal.texture.tres" id="3_s5e0k"]
+
+[resource]
+albedo_texture = ExtResource("1_yrdbx")
+emission = Color(1, 1, 1, 1)
+normal_enabled = true
+normal_texture = ExtResource("3_s5e0k")
+detail_enabled = true
+detail_mask = ExtResource("2_cawk8")
+detail_blend_mode = 3
+detail_albedo = ExtResource("2_cawk8")
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

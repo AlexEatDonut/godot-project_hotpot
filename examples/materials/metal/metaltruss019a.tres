@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://burfwx1fj3wgk"]
+
+[ext_resource type="Texture2D" uid="uid://cl2mbxt0b18l6" path="res://examples/materials/metal/metaltruss019a.texture.tres" id="1_qa0te"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_qa0te")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

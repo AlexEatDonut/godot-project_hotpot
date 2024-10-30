@@ -1,0 +1,135 @@
+[gd_scene load_steps=6 format=3 uid="uid://3syfwb4b44pi"]
+
+[ext_resource type="FontFile" uid="uid://beyxefwb8hwdn" path="res://ZTGatha/ZTGatha-SemiBold.ttf" id="1_b2l4f"]
+
+[sub_resource type="Animation" id="Animation_4ouvh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/MarginContainer/LeftSideUI/playerHP:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sdrxu"]
+resource_name = "hp_getHealth"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/MarginContainer/LeftSideUI/playerHP:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 0.152941, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w2c6e"]
+resource_name = "hp_takeDamage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/MarginContainer/LeftSideUI/playerHP:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i1v7f"]
+_data = {
+"RESET": SubResource("Animation_4ouvh"),
+"hp_getHealth": SubResource("Animation_sdrxu"),
+"hp_takeDamage": SubResource("Animation_w2c6e")
+}
+
+[node name="playerHudElements" type="CanvasLayer"]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="LeftSideUI" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="hp_label" type="Label" parent="Control/MarginContainer/LeftSideUI"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_b2l4f")
+theme_override_font_sizes/font_size = 32
+text = "HP"
+
+[node name="playerHP" type="Label" parent="Control/MarginContainer/LeftSideUI"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_b2l4f")
+theme_override_font_sizes/font_size = 64
+text = "100"
+
+[node name="RightSideUI" type="HBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="playerAmmo" type="HBoxContainer" parent="Control/MarginContainer/RightSideUI"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="playerAmmo-weap" type="Label" parent="Control/MarginContainer/RightSideUI/playerAmmo"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_b2l4f")
+theme_override_font_sizes/font_size = 48
+text = "0"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/RightSideUI/playerAmmo"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="playerAmmo-max" type="Label" parent="Control/MarginContainer/RightSideUI/playerAmmo"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_b2l4f")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="hud-animations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i1v7f")
+}

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6yjatefutyoh"]
+
+[ext_resource type="Texture2D" uid="uid://bkunhao7lx4ln" path="res://examples/materials/dev/dev_measuregeneric01b.texture.tres" id="1_v8l4f"]
+
+[resource]
+albedo_texture = ExtResource("1_v8l4f")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://na2051lysql8"]
+
+[ext_resource type="Texture2D" uid="uid://qdm0mx38iqbg" path="res://examples/materials/concrete/concretewall006a.texture.tres" id="1_jkh6f"]
+[ext_resource type="Texture2D" uid="uid://db2apdojnud6v" path="res://examples/materials/detail/noise_detail_01.texture.tres" id="2_g6ht8"]
+
+[resource]
+albedo_texture = ExtResource("1_jkh6f")
+emission = Color(1, 1, 1, 1)
+detail_enabled = true
+detail_mask = ExtResource("2_g6ht8")
+detail_blend_mode = 3
+detail_albedo = ExtResource("2_g6ht8")
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

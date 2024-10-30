@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dagrb66y4sl8"]
+
+[ext_resource type="Texture2D" uid="uid://b12rxyilgygke" path="res://examples/materials/metal/metaltruss008a.texture.tres" id="1_xwdfj"]
+
+[resource]
+albedo_texture = ExtResource("1_xwdfj")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

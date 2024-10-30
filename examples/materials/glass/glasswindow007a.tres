@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dg0s62eunddga"]
+
+[ext_resource type="Texture2D" uid="uid://crs2mprq6syi4" path="res://examples/materials/glass/glasswindow007a.texture.tres" id="1_vy185"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_vy185")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

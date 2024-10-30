@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cffyofr834fjc"]
+
+[ext_resource type="Texture2D" uid="uid://roqx5cp35sls" path="res://examples/materials/metal/metaltrack001a.texture.tres" id="1_eduru"]
+
+[resource]
+albedo_texture = ExtResource("1_eduru")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

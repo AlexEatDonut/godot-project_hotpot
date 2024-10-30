@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bndhygewo520r"]
+
+[ext_resource type="Texture2D" uid="uid://csd3akqlqfr2o" path="res://examples/materials/concrete/concretewall041a.texture.tres" id="1_rmctc"]
+[ext_resource type="Texture2D" uid="uid://db2apdojnud6v" path="res://examples/materials/detail/noise_detail_01.texture.tres" id="2_n2y7f"]
+[ext_resource type="Texture2D" uid="uid://mnjsqp2hyym6" path="res://examples/materials/concrete/concretewall041a_normal.texture.tres" id="3_uro1a"]
+
+[resource]
+albedo_texture = ExtResource("1_rmctc")
+emission = Color(1, 1, 1, 1)
+normal_enabled = true
+normal_texture = ExtResource("3_uro1a")
+detail_enabled = true
+detail_mask = ExtResource("2_n2y7f")
+detail_blend_mode = 3
+detail_albedo = ExtResource("2_n2y7f")
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

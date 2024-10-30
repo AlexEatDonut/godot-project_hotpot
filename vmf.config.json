@@ -1,0 +1,34 @@
+{
+	"gameInfoPath": "D:/SteamLibrary/steamapps/SourceMods/GodotVMF",
+	"mdl2obj": "res://mdl2obj/mdl2obj.exe",
+
+	"import": {
+		"scale": 0.025,
+		"generateCollision": true,
+		"generateLightmapUV2": true,
+		"lightmapTexelSize": 0.4,
+		"instancesFolder": "res://examples/instances",
+		"entitiesFolder": "res://examples/entities",
+		"geometryFolder": "res://examples/geometry"
+	},
+
+	"models": {
+		"import": true,
+		"generateCollision": true,
+		"lightmapTexelSize": 0.4,
+		"targetFolder": "res://examples/models"
+	},
+
+	"material": {
+		"importMode": 2,
+		"generateMipmaps": true,
+		"ignore": [
+			"TOOLS/TOOLSNODRAW",
+			"TOOLS/TOOLSSKYBOX",
+			"TOOLS/TOOLSINVISIBLE"
+		],
+		"fallbackMaterial": null,
+		"defaultTextureSize": 512,
+		"targetFolder": "res://examples/materials"
+	}
+}

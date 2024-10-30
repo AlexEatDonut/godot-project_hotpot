@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" script_class="WorldVertexTransitionMaterial" load_steps=5 format=3 uid="uid://db0w3aejal8l5"]
+
+[ext_resource type="Texture2D" uid="uid://dupdopb18ecwr" path="res://examples/materials/nature/sandfloor009b.texture.tres" id="1_pf3kd"]
+[ext_resource type="Texture2D" uid="uid://ggnhk6x5ynky" path="res://examples/materials/nature/sandfloor009a.texture.tres" id="2_14wqp"]
+[ext_resource type="Script" path="res://addons/godotvmf/shaders/WorldVertexTransitionMaterial.gd" id="3_w5koq"]
+[ext_resource type="Shader" path="res://addons/godotvmf/shaders/WorldVertexTransitionMaterial.gdshader" id="4_y8ic5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("4_y8ic5")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_color2 = Color(1, 1, 1, 1)
+shader_parameter/point_size = null
+shader_parameter/roughness = null
+shader_parameter/metallic = null
+shader_parameter/metallic_texture_channel = null
+shader_parameter/specular = null
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/albedo_texture = ExtResource("1_pf3kd")
+shader_parameter/albedo_texture2 = ExtResource("2_14wqp")
+script = ExtResource("3_w5koq")
+albedo_texture = ExtResource("1_pf3kd")
+albedo_texture2 = ExtResource("2_14wqp")
+metallic = 0.0
+specular = 0.0
+roughness = 0.0
+metadata/center = Vector2(0.5, 0.5)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0.0
+metadata/translate = Vector2(0, 0)

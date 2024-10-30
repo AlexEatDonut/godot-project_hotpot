@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ba82gayr751f1"]
+
+[ext_resource type="Texture2D" uid="uid://cpi3kn21sav8t" path="res://examples/materials/wood/woodwall045a.texture.tres" id="1_fmor5"]
+
+[resource]
+albedo_texture = ExtResource("1_fmor5")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

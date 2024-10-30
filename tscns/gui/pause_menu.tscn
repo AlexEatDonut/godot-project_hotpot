@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwfoh1p1welfl"]
+
+[ext_resource type="Script" path="res://tscns/gui/pause_menu.gd" id="1_vsefe"]
+[ext_resource type="Theme" uid="uid://to8h1o14nm5q" path="res://menu_themes.tres" id="1_y8igk"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vsefe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.352941, 0.352941, 0.352941, 0.713726)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 12
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_y8igk")
+text = "Paused"
+
+[node name="btn-resume" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_y8igk")
+text = "Resume"
+
+[node name="btn-restart" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_y8igk")
+text = "Restart
+"
+
+[node name="btn-settings" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_y8igk")
+text = "Settings"
+
+[node name="btn-quit" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_y8igk")
+text = "Quit"
+
+[connection signal="pressed" from="GridContainer/btn-resume" to="." method="_on_btnresume_pressed"]
+[connection signal="pressed" from="GridContainer/btn-restart" to="." method="_on_btnrestart_pressed"]
+[connection signal="pressed" from="GridContainer/btn-settings" to="." method="_on_btnsettings_pressed"]
+[connection signal="pressed" from="GridContainer/btn-quit" to="." method="_on_btnquit_pressed"]

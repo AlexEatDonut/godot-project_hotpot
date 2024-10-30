@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://d22rha7uwtnt"]
+
+[ext_resource type="Texture2D" uid="uid://cbpm0rrj5mnn5" path="res://examples/materials/tile/tileroof002a.texture.tres" id="1_re0hm"]
+[ext_resource type="Texture2D" uid="uid://c73xnepj1c3on" path="res://examples/materials/tile/tileroof003a_normal.texture.tres" id="2_j36j6"]
+
+[resource]
+albedo_texture = ExtResource("1_re0hm")
+emission = Color(1, 1, 1, 1)
+normal_enabled = true
+normal_texture = ExtResource("2_j36j6")
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

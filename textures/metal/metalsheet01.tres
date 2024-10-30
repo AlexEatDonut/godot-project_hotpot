@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://clm5gebq684s8"]
+
+[ext_resource type="Texture2D" uid="uid://ky3u0b5oo4b6" path="res://textures/metal/metalsheet01.png" id="1_flg1p"]
+[ext_resource type="Texture2D" uid="uid://dkgsgnq3yp7av" path="res://textures/metal/metalsheet01_normal.png" id="2_eyxpr"]
+
+[resource]
+albedo_texture = ExtResource("1_flg1p")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.35
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("2_eyxpr")

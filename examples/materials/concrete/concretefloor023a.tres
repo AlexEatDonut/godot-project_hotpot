@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bj25r8ya0lujv"]
+
+[ext_resource type="Texture2D" uid="uid://fg4fjjgduulb" path="res://examples/materials/concrete/concretefloor023a.texture.tres" id="1_o7djb"]
+[ext_resource type="Texture2D" uid="uid://db2apdojnud6v" path="res://examples/materials/detail/noise_detail_01.texture.tres" id="2_ga4pa"]
+
+[resource]
+albedo_texture = ExtResource("1_o7djb")
+emission = Color(1, 1, 1, 1)
+detail_enabled = true
+detail_mask = ExtResource("2_ga4pa")
+detail_blend_mode = 3
+detail_albedo = ExtResource("2_ga4pa")
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

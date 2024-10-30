@@ -1,0 +1,8 @@
+# Made in Blockbench 4.11.1
+newmtl m_0a8f3f3c-482a-c3b3-6c33-6ff0120fa6aa
+map_Kd basicmetal01.png
+newmtl m_fe88deb5-8b52-91b8-2d49-dd438b6abb0d
+map_Kd dev_transluscent.png
+newmtl m_9c43e165-45e9-2c2f-5c2d-8fb61ab1eb83
+map_Kd grate01.png
+newmtl none

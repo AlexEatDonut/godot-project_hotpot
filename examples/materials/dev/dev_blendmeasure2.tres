@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" script_class="WorldVertexTransitionMaterial" load_steps=5 format=3 uid="uid://batsi72y1dyfn"]
+
+[ext_resource type="Texture2D" uid="uid://wbi7jqcm8mgg" path="res://examples/materials/dev/dev_measurewall01d.texture.tres" id="1_n5gnj"]
+[ext_resource type="Texture2D" uid="uid://b8rryvb4sbf6w" path="res://examples/materials/dev/dev_measurewall01a.texture.tres" id="2_1xgjw"]
+[ext_resource type="Script" path="res://addons/godotvmf/shaders/WorldVertexTransitionMaterial.gd" id="3_7v74t"]
+[ext_resource type="Shader" path="res://addons/godotvmf/shaders/WorldVertexTransitionMaterial.gdshader" id="4_5u5rf"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("4_5u5rf")
+shader_parameter/albedo_color = Color(1, 1, 1, 1)
+shader_parameter/albedo_color2 = Color(1, 1, 1, 1)
+shader_parameter/point_size = null
+shader_parameter/roughness = null
+shader_parameter/metallic = null
+shader_parameter/metallic_texture_channel = null
+shader_parameter/specular = null
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/albedo_texture = ExtResource("1_n5gnj")
+shader_parameter/albedo_texture2 = ExtResource("2_1xgjw")
+script = ExtResource("3_7v74t")
+albedo_texture = ExtResource("1_n5gnj")
+albedo_texture2 = ExtResource("2_1xgjw")
+metallic = 0.0
+specular = 0.0
+roughness = 0.0
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

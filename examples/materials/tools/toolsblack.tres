@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dapr0lhvbpbes"]
+
+[ext_resource type="Texture2D" uid="uid://sxcusbwsp832" path="res://examples/materials/tools/toolsblack.texture.tres" id="1_1aks4"]
+
+[resource]
+shading_mode = 0
+albedo_texture = ExtResource("1_1aks4")
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

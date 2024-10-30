@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d2ko08jjfiyx3"]
+
+[ext_resource type="Texture2D" uid="uid://bpesb5d51lga7" path="res://examples/materials/dev/reflectivity_30.texture.tres" id="1_7be14"]
+
+[resource]
+albedo_texture = ExtResource("1_7be14")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

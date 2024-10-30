@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b5k6ibdlm0ovy"]
+
+[ext_resource type="Texture2D" uid="uid://cb3rr6ll15njg" path="res://examples/materials/nature/grassfloor002a.texture.tres" id="1_li248"]
+
+[resource]
+albedo_texture = ExtResource("1_li248")
+emission = Color(1, 1, 1, 1)
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

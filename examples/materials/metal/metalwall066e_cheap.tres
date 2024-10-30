@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c2im6mi2waaa5"]
+
+[ext_resource type="Texture2D" uid="uid://c0epa3xf2u6eo" path="res://examples/materials/metal/metalwall066e.texture.tres" id="1_d1ib1"]
+[ext_resource type="Texture2D" uid="uid://ctd3nfgv7oi40" path="res://examples/materials/detail/metal_detail_01.texture.tres" id="2_v07ci"]
+
+[resource]
+albedo_texture = ExtResource("1_d1ib1")
+emission = Color(1, 1, 1, 1)
+detail_enabled = true
+detail_mask = ExtResource("2_v07ci")
+detail_blend_mode = 3
+detail_albedo = ExtResource("2_v07ci")
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://1blq8btf0lxt"]
+
+[ext_resource type="ArrayMesh" uid="uid://ca7r0dtfwau6w" path="res://obj-models/fence01/fence01a.obj" id="1_3n6nd"]
+[ext_resource type="Material" uid="uid://c1spsdr53fdsn" path="res://textures/metal/basicmetal01.tres" id="2_uxebk"]
+[ext_resource type="Material" uid="uid://wm8mmyr668p" path="res://textures/metal/grate01.tres" id="3_k5x4j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3dp8d"]
+size = Vector3(2.75, 0.267, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ibb6"]
+size = Vector3(2.68445, 2.75151, 0.19873)
+
+[node name="fence01a" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+mass = 150.0
+
+[node name="Fence01a" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0836353, 0, -0.0986634)
+mesh = ExtResource("1_3n6nd")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("2_uxebk")
+surface_material_override/1 = ExtResource("2_uxebk")
+surface_material_override/2 = ExtResource("2_uxebk")
+surface_material_override/3 = ExtResource("2_uxebk")
+surface_material_override/4 = ExtResource("2_uxebk")
+surface_material_override/5 = ExtResource("3_k5x4j")
+surface_material_override/6 = ExtResource("2_uxebk")
+surface_material_override/7 = ExtResource("2_uxebk")
+
+[node name="CollisionShape3D-2" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0829773, 0.123749, -0.0942459)
+shape = SubResource("BoxShape3D_3dp8d")
+
+[node name="CollisionShape3D-1" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0808932, 1.62727, -0.0970871)
+shape = SubResource("BoxShape3D_0ibb6")

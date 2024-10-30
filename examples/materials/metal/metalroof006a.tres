@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://br7d62juysrli"]
+
+[ext_resource type="Texture2D" uid="uid://bislyw4da0ysx" path="res://examples/materials/metal/metalroof006a.texture.tres" id="1_vause"]
+[ext_resource type="Texture2D" uid="uid://djvbqu5d55g5q" path="res://examples/materials/metal/metalroof006a_normal.texture.tres" id="2_yq26p"]
+
+[resource]
+albedo_texture = ExtResource("1_vause")
+emission = Color(1, 1, 1, 1)
+normal_enabled = true
+normal_texture = ExtResource("2_yq26p")
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)

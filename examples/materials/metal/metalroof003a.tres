@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://djjutw7mjvsh"]
+
+[ext_resource type="Texture2D" uid="uid://hcm4m3yqhs2u" path="res://examples/materials/metal/metalroof003a.texture.tres" id="1_t1jqs"]
+[ext_resource type="Texture2D" uid="uid://baaqsiv10k40o" path="res://examples/materials/metal/metalroof003a_normal.texture.tres" id="2_nstvi"]
+
+[resource]
+albedo_texture = ExtResource("1_t1jqs")
+emission = Color(1, 1, 1, 1)
+normal_enabled = true
+normal_texture = ExtResource("2_nstvi")
+detail_blend_mode = 3
+metadata/center = Vector2(0, 0)
+metadata/scale = Vector2(1, 1)
+metadata/rotate = 0
+metadata/translate = Vector2(0, 0)
