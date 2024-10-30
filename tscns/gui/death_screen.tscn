@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://to8h1o14nm5q" path="res://menu_themes.tres" id="1_y8igk"]
 
 [node name="DeathScreen" type="Control"]
-visible = false
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.0627451, 0.0627451, 0.0627451, 0.752941)
 
 [node name="GridContainer" type="GridContainer" parent="."]

@@ -78,7 +78,8 @@ func _ready():
 	player_hp_hud.text = str(Playerinfo.health)
 	Playerinfo.connect("health_decreased", hud_reduce_hp)
 	Playerinfo.connect("health_increased", hud_give_hp)
-	
+	#Playerinfo.connect("no_health", _on_death)
+#	When spawning : focus the mouse in the game and then connect the pause menu signal to make sure it gets paused when it should be
 	_mouse_visible(isMouseVisible)
 	Pausemenu.connect("isPaused", _mouse_visible)
 
@@ -90,12 +91,12 @@ func _ready():
 	_update_camera()
 
 func _unhandled_input(event : InputEvent):
+#	OLD CODE : IF THE GAME IS NOT FOCUSED AND YOU CLICK IN : MOUSE DISAPEARS
 	#if event is InputEventMouseButton:
 		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#elif event.is_action_pressed("ui_cancel"):
 		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if event.is_action_pressed("esc"):
-		print("haha")
+		
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			if camera_style == CameraStyle.THIRD_PERSON_FREE_LOOK:
@@ -584,3 +585,7 @@ func _mouse_visible(value):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	elif value == false:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#ON DEATH : show death screen
+#func _on_death():
+	#var deathScreen = preload("res://tscns/gui/death_screen.tscn").instantiate()
+	#get_tree().current_scene.add_child(deathScreen)
