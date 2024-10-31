@@ -10,6 +10,7 @@ size = Vector3(0.9, 0.9, 0.9)
 
 [node name="item_medkit_medium" type="Node3D"]
 script = ExtResource("1_o11i4")
+healthRatio = 0.2
 
 [node name="entityCollisionHull" parent="." instance=ExtResource("2_bp0w0")]
 healthRatio = 50

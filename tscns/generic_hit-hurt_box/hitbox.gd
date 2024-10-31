@@ -2,7 +2,7 @@ extends Area3D
 
 #const HitEffect = preload("res://Effects/hit_effect.tscn")
 
-@export var damage = 1
+#@export var damage = 1
 
 @onready var timer = $Timer
 

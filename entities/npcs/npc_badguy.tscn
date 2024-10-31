@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://datcydt1gx3u0"]
+
+[ext_resource type="Script" path="res://entities/npcs/npc_badguy.gd" id="1_ns7rk"]
+[ext_resource type="FontFile" uid="uid://xukm84lst3g5" path="res://ZTGatha/ZTGatha-SemiBold.otf" id="1_ram25"]
+[ext_resource type="PackedScene" uid="uid://bg4a5flvnhv1c" path="res://tscns/generic_hit-hurt_box/hitbox.tscn" id="3_5kiv5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kuily"]
+radius = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vr258"]
+albedo_color = Color(0.870588, 0.156863, 0.156863, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ldam2"]
+material = SubResource("StandardMaterial3D_vr258")
+radius = 0.35
+
+[node name="npc_badguy" type="CharacterBody3D" groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_mask = 272
+script = ExtResource("1_ns7rk")
+
+[node name="dev_entity_name" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39849, 0)
+pixel_size = 0.01
+billboard = 2
+text = "npc_badguy
+(dev entity)"
+font = ExtResource("1_ram25")
+
+[node name="Hitbox" parent="." instance=ExtResource("3_5kiv5")]
+collision_layer = 192
+collision_mask = 8
+
+[node name="CollisionShape3D" parent="Hitbox" index="0"]
+shape = SubResource("CapsuleShape3D_kuily")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kuily")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ldam2")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="THIS IS A DEV NPC" type="Node" parent="."]
+
+[editable path="Hitbox"]

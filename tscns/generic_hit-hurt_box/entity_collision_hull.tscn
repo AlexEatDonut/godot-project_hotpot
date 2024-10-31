@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://tscns/generic_hit-hurt_box/entity_collision_hull.gd" id="1_snbnd"]
 
 [node name="entityCollisionHull" type="Area3D"]
-collision_mask = 16
+collision_mask = 32
 script = ExtResource("1_snbnd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

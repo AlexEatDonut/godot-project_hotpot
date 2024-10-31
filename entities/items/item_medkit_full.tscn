@@ -8,7 +8,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_v0q68"]
 size = Vector3(0.9, 0.9, 0.9)
 
-[node name="item_medkit_medium" type="Node3D"]
+[node name="item_medkit_full" type="Node3D"]
 script = ExtResource("1_drkfs")
 
 [node name="entityCollisionHull" parent="." instance=ExtResource("2_bp0w0")]

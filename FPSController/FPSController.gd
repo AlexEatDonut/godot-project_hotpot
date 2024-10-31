@@ -58,12 +58,11 @@ const MAX_STEP_HEIGHT = 0.5 # Raycasts length should match this. StairsAhead one
 var _snapped_to_stairs_last_frame := false
 var _last_frame_was_on_floor = -INF
 
-#Variable for fall damage
+#Variable for calculating fall damage
 var old_vel : float = 0.0
 
 #Variable for checking if health received is healing or damage ? Never used. Left over code ?
 #var previous_health = Playerinfo.health
-
 
 @onready var hudAnimationPlayer = $"playerHudElements/hud-animations"
 @onready var hitbox = $Hitbox
@@ -72,6 +71,9 @@ var old_vel : float = 0.0
 #Variable for defining the mouse focus state
 @onready var Pausemenu = $playerHudElements/PauseMenu
 var isMouseVisible = false
+
+#Variable to test damaging enemies
+@onready var aimcast = $HeadOriginalPosition/Head/CameraSmooth/Camera3D/DevDamageBeam
 
 func get_move_speed() -> float:
 	if is_crouched:
@@ -95,12 +97,13 @@ func _ready():
 	_update_camera()
 
 func _unhandled_input(event : InputEvent):
-#	OLD CODE : IF THE GAME IS NOT FOCUSED AND YOU CLICK IN : MOUSE DISAPEARS
+#	REMNANT CODE : IF THE GAME IS NOT FOCUSED AND YOU CLICK IN : MOUSE DISAPEARS
 	#if event is InputEventMouseButton:
 		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#elif event.is_action_pressed("ui_cancel"):
 		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		
+	
+	
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			if camera_style == CameraStyle.THIRD_PERSON_FREE_LOOK:
@@ -186,6 +189,18 @@ func update_animations():
 		animation_tree.set("parameters/WalkBlendSpace2D/blend_position", rel_vel_xz)
 
 func _process(delta):
+	
+	if Input.is_action_pressed("click"):
+		if aimcast.is_colliding():
+			var target = aimcast.get_collider()
+			#this is a hacky way to get around the hitbox system i have put in place. 
+			#I will call upon signals or some other ways later 
+			var target_charBody = target.get_parent_node_3d()
+			if target_charBody.is_in_group("enemy"):
+				print("hit enemy")
+				target_charBody.health -= 10
+				
+	
 	_handle_controller_look_input(delta)
 	if get_interactable_component_at_shapecast():
 		get_interactable_component_at_shapecast().hover_cursor(self)

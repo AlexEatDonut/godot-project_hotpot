@@ -124,11 +124,12 @@ click={
 3d_physics/layer_1="PlayerCollisionHull"
 3d_physics/layer_2="World"
 3d_physics/layer_3="PlayerHitbox"
-3d_physics/layer_4="EnemyCollisionHull"
-3d_physics/layer_5="EntityCollisionHull"
-3d_physics/layer_6="NeutralDamage"
-3d_physics/layer_7="PlayerHurtbox"
-3d_physics/layer_8="EnemyHurtbox"
+3d_physics/layer_4="EnemyHitbox"
+3d_physics/layer_5="EnemyCollisionHull"
+3d_physics/layer_6="EntityCollisionHull"
+3d_physics/layer_7="NeutralDamage"
+3d_physics/layer_8="PlayerHurtbox"
+3d_physics/layer_9="EnemyHurtbox"
 
 [physics]
 
