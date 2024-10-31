@@ -1,7 +1,8 @@
 extends CharacterBody3D
 class_name PlayerFPSController
 
-@export var max_player_health : float = 100
+#Remnant code from when i was importing damage and health systems
+#@export var max_player_health : float = 100
 
 @export var look_sensitivity : float = 0.006
 @export var controller_look_sensitivity := 0.05
@@ -25,8 +26,11 @@ var headbob_time := 0.0
 @export var air_accel := 800.0
 @export var air_move_speed := 500.0
 
+# Code related to fall damage.
+# Threshhold is the vertical velocity (Y) 
+# The coefficient is remnant code from tests to get the fall damage at a sweet spot 
 @export var fall_damage_threshold := 16
-var fall_damage_coef : int = ProjectSettings.get_setting("physics/3d/default_gravity")/2
+#var fall_damage_coef : int = ProjectSettings.get_setting("physics/3d/default_gravity")/2
 
 @export var swim_up_speed := 10.0
 @export var climb_speed := 7.0
@@ -554,12 +558,13 @@ func hud_give_hp():
 	hudAnimationPlayer.play("hp_getHealth")
 
 func player_take_damage(damage):
-	var damage_rounded = round(damage)
-	Playerinfo.decrease_health(damage_rounded, 1)
-	#print("damage rounded ended up at :" + str(damage_rounded))
-	hud_reduce_hp()
-	var playerHurtSnd = preload("res://sounds/player/player_hurt.tscn").instantiate()
-	get_tree().current_scene.add_child(playerHurtSnd)
+	if Playerinfo.godmode == false :
+		var damage_rounded = round(damage)
+		Playerinfo.decrease_health(damage_rounded, 1)
+		#print("damage rounded ended up at :" + str(damage_rounded))
+		hud_reduce_hp()
+		var playerHurtSnd = preload("res://sounds/player/player_hurt.tscn").instantiate()
+		get_tree().current_scene.add_child(playerHurtSnd)
 
 func player_give_health(health, ratio):
 	var health_rounded = round(health)

@@ -12,6 +12,9 @@ extends Node
 
 @export var max_health = 100: 
 	set = set_max_health
+
+@export var godmode : bool = false
+
 var health = max_health  :
 	get: 
 		return health
@@ -26,6 +29,8 @@ var health = max_health  :
 		emit_signal("health_changed", health)
 		if health <= 0:
 			emit_signal("no_health")
+
+
 
 func set_max_health(value):
 	max_health = value
