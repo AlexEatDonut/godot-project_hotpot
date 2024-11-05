@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://datcydt1gx3u0"]
+[gd_scene load_steps=8 format=3 uid="uid://datcydt1gx3u0"]
 
 [ext_resource type="Script" path="res://entities/npcs/npc_badguy.gd" id="1_ns7rk"]
 [ext_resource type="FontFile" uid="uid://xukm84lst3g5" path="res://ZTGatha/ZTGatha-SemiBold.otf" id="1_ram25"]
 [ext_resource type="PackedScene" uid="uid://bg4a5flvnhv1c" path="res://tscns/generic_hit-hurt_box/hitbox.tscn" id="3_5kiv5"]
+[ext_resource type="PackedScene" uid="uid://dopwp0etou4cy" path="res://Scripts/enemy_stats.tscn" id="4_uvri3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kuily"]
 radius = 0.35
@@ -41,6 +42,14 @@ shape = SubResource("CapsuleShape3D_kuily")
 mesh = SubResource("CapsuleMesh_ldam2")
 skeleton = NodePath("../CollisionShape3D")
 
+[node name="EnemyStats" parent="." instance=ExtResource("4_uvri3")]
+
 [node name="THIS IS A DEV NPC" type="Node" parent="."]
+process_mode = 4
+
+[connection signal="graceperiod_ended" from="Hitbox" to="." method="_on_hitbox_graceperiod_ended"]
+[connection signal="graceperiod_started" from="Hitbox" to="." method="_on_hitbox_graceperiod_started"]
+[connection signal="health_changed" from="EnemyStats" to="." method="_on_enemy_stats_health_changed"]
+[connection signal="no_health" from="EnemyStats" to="." method="_on_enemy_stats_no_health"]
 
 [editable path="Hitbox"]

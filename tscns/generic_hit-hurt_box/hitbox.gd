@@ -2,6 +2,7 @@ extends Area3D
 
 #const HitEffect = preload("res://Effects/hit_effect.tscn")
 
+#remnant code of the 2D action rpg where it would deal damage i believe ?
 #@export var damage = 1
 
 @onready var timer = $Timer
