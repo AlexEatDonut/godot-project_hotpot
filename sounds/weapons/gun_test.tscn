@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgulaqbea2hv"]
+
+[ext_resource type="PackedScene" uid="uid://bea0qweic16li" path="res://sounds/weapons/weapon_fire.tscn" id="1_c5wnb"]
+[ext_resource type="AudioStream" uid="uid://druvuwkg1bmdk" path="res://placeholders/pistol_fire2.wav" id="2_a2gw3"]
+
+[node name="gun_test" instance=ExtResource("1_c5wnb")]
+stream = ExtResource("2_a2gw3")
+volume_db = -9.0
+autoplay = true

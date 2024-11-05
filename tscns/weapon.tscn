@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://78vc80y3pt41"]
+
+[ext_resource type="Script" path="res://tscns/weapon.gd" id="1_e4m06"]
+
+[node name="Weapon" type="Node3D"]
+script = ExtResource("1_e4m06")
+
+[node name="DevDamageBeam" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.85, -0.4)
+target_position = Vector3(0, -1000, 0)
+collision_mask = 128
+collide_with_areas = true
+debug_shape_custom_color = Color(0.658824, 0, 1, 1)
+
+[node name="Timer" type="Timer" parent="."]

@@ -72,8 +72,6 @@ var old_vel : float = 0.0
 @onready var Pausemenu = $playerHudElements/PauseMenu
 var isMouseVisible = false
 
-#Variable to test damaging enemies
-@onready var aimcast = $HeadOriginalPosition/Head/CameraSmooth/Camera3D/DevDamageBeam
 
 func get_move_speed() -> float:
 	if is_crouched:
@@ -102,7 +100,7 @@ func _unhandled_input(event : InputEvent):
 		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	#elif event.is_action_pressed("ui_cancel"):
 		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
+
 	
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
@@ -189,18 +187,6 @@ func update_animations():
 		animation_tree.set("parameters/WalkBlendSpace2D/blend_position", rel_vel_xz)
 
 func _process(delta):
-	
-	if Input.is_action_pressed("click"):
-		if aimcast.is_colliding():
-			var target = aimcast.get_collider()
-			#this is a hacky way to get around the hitbox system i have put in place. 
-			#I will call upon signals or some other ways later 
-			var target_charBody = target.get_parent_node_3d()
-			if target_charBody.is_in_group("enemy"):
-				print("hit enemy")
-				target_charBody.health -= 10
-				
-	
 	_handle_controller_look_input(delta)
 	if get_interactable_component_at_shapecast():
 		get_interactable_component_at_shapecast().hover_cursor(self)
