@@ -2,7 +2,7 @@ extends Node
 
 @export var strength = 1
 
-@export var max_health = 50: 
+@export var max_health = 200: 
 	set = set_max_health
 var health = max_health  :
 	get: 
