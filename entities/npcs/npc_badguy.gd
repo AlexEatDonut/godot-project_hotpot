@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var stats = $EnemyStats
 @onready var hitbox = $Hitbox
 
-@onready var health = stats.health
+#@onready var health = stats.health
 #var health = 100
 
 func _ready():
@@ -13,9 +13,9 @@ func _ready():
 	#if health <= 0:
 		#queue_free()
 
-func _on_taking_damage(value):
-	#stats.health -= value
-	health -= value
+func _decrease_health(value):
+	stats.health -= value
+	#health -= value
 	hitbox.start_graceperiod(1)
 	print("processed starting graceperiod of 1 sec")
 

@@ -43,6 +43,7 @@ mesh = SubResource("CapsuleMesh_ldam2")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="EnemyStats" parent="." instance=ExtResource("4_uvri3")]
+max_health = 20
 
 [node name="THIS IS A DEV NPC" type="Node" parent="."]
 process_mode = 4
