@@ -3,6 +3,7 @@ extends Node3D
 @export var fireInterval  = 0.2
 #@onready var shotsPerSecond = 
 #calculus is hard
+@export var weaponDamage = 10
 
 enum{
 	IDLE,
@@ -13,12 +14,16 @@ enum{
 var state = IDLE 
 
 #Variable to test damaging enemies
-@onready var aimcast = $DevDamageBeam
 @onready var timer = $Timer
+#preloading the raycast to call upon it later
+var hitscan = preload("res://tscns/generic_hit-hurt_box/raycast3d_hitscan.tscn")
 
 var _duration_fired = 0
 
 func _ready() -> void:
+	pass
+
+func _physics_process(delta: float) -> void:
 	pass
 
 func playGunShot():
@@ -32,22 +37,15 @@ func _unhandled_input(event : InputEvent):
 		_weapon_fire()
 	if event.is_action_released("click"):
 		state = IDLE
-		
+
 
 
 func _weapon_fire():
 	while state == SHOOTING :
 		print("shooting with my weapon :)")
 		playGunShot()
+		var damageHitscan = hitscan.instantiate()
+		damageHitscan.transform.origin = $hitscanOrigin.transform.origin
+		add_child(damageHitscan)
 		await get_tree().create_timer(fireInterval).timeout
-		if aimcast.is_colliding():
-			var target = aimcast.get_collider()
-			#this is a hacky way to get around the hitbox system i have put in place. 
-			#I will call upon signals or some other ways later 
-			var target_charBody = target.get_parent_node_3d()
-			#print(str(target_charBody.stats.health))
-			if target_charBody.is_in_group("enemy"):
-				target_charBody._on_taking_damage(10)
-				print("hit enemy")
-				
-				#target_charBody.health -= 10
+		

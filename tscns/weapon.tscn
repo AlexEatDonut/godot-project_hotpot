@@ -5,11 +5,7 @@
 [node name="Weapon" type="Node3D"]
 script = ExtResource("1_e4m06")
 
-[node name="DevDamageBeam" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.85, -0.4)
-target_position = Vector3(0, -1000, 0)
-collision_mask = 128
-collide_with_areas = true
-debug_shape_custom_color = Color(0.658824, 0, 1, 1)
+[node name="hitscanOrigin" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85, -0.4)
 
 [node name="Timer" type="Timer" parent="."]
