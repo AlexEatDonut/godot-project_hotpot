@@ -16,8 +16,11 @@ func _ready():
 func _decrease_health(value):
 	stats.health -= value
 	#health -= value
-	hitbox.start_graceperiod(1)
-	print("processed starting graceperiod of 1 sec")
+	#the game attempts to start a grace period but fails due to the raycast still being in his hitbox, 
+	#preventing any changes to the monitoring to happen
+		#TODO : Find a way to accomplish this idea
+		#hitbox.start_graceperiod(1)
+		#print("processed starting graceperiod of 1 sec")
 
 
 func _on_hitbox_graceperiod_started() -> void:
