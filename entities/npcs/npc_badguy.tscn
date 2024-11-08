@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://datcydt1gx3u0"]
+[gd_scene load_steps=10 format=3 uid="uid://datcydt1gx3u0"]
 
 [ext_resource type="Script" path="res://entities/npcs/npc_badguy.gd" id="1_ns7rk"]
 [ext_resource type="FontFile" uid="uid://xukm84lst3g5" path="res://ZTGatha/ZTGatha-SemiBold.otf" id="1_ram25"]
@@ -14,6 +14,12 @@ albedo_color = Color(0.870588, 0.156863, 0.156863, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ldam2"]
 material = SubResource("StandardMaterial3D_vr258")
 radius = 0.35
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ds1am"]
+albedo_color = Color(0.870588, 0.156863, 0.156863, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7vnbc"]
+size = Vector3(0.7, 0.7, 0.35)
 
 [node name="npc_badguy" type="CharacterBody3D" groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -41,6 +47,15 @@ shape = SubResource("CapsuleShape3D_kuily")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_ldam2")
 skeleton = NodePath("../CollisionShape3D")
+
+[node name="NpcHeadLocation" type="Marker3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/NpcHeadLocation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20288)
+material_override = SubResource("StandardMaterial3D_ds1am")
+mesh = SubResource("BoxMesh_7vnbc")
+skeleton = NodePath("../..")
 
 [node name="EnemyStats" parent="." instance=ExtResource("4_uvri3")]
 max_health = 20
