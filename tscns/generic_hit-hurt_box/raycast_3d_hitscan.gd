@@ -10,10 +10,11 @@ signal collide_body(collider)
 
 func _ready() -> void:
 	self.top_level = true
-	print("instantiated a raycast")
+	#print("instantiated a raycast")
 	if is_colliding():
 		pass
-	
+	await get_tree().create_timer(0.1).timeout
+	hasTriggered = true
 	await get_tree().create_timer(3).timeout
 	queue_free()
 
@@ -22,13 +23,15 @@ func _physics_process(delta: float) -> void:
 		if is_colliding():
 			var target = get_collider()
 			hasTriggered = true
-			print(target.get_collision_layer())
+			#print(target.get_collision_layer())
 			#Collision layer is the world
-			if target.get_collision_layer() == 401:
-				pass
-			else : 
-				emit_signal("collide_body", target)
-			print(target)
+			#CODE THAT NEEDS REWRITE : DETECT WHICH LAYER IT IS DETECTING WITH
+			#if target.get_collision_layer() == 401:
+				#pass
+			#else : 
+				#emit_signal("collide_body", target)
+			#print(target)
+			emit_signal("collide_body", target)
 			
 
 func _on_collide_body(collider: Variant) -> void:

@@ -18,13 +18,15 @@ var state = IDLE
 #preloading the raycast to call upon it later
 var hitscan = preload("res://tscns/generic_hit-hurt_box/raycast3d_hitscan.tscn")
 
-var _duration_fired = 0
+var readyForFire = true
+
+var deltaTime:float
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	pass
+	deltaTime = delta
 
 func playGunShot():
 	var gunShot = preload("res://sounds/weapons/gun_test.tscn").instantiate()
@@ -34,18 +36,26 @@ func playGunShot():
 func _unhandled_input(event : InputEvent):
 	if event.is_action_pressed("click"):
 		state = SHOOTING
-		_weapon_fire()
+		_weapon_fire(deltaTime)
 	if event.is_action_released("click"):
 		state = IDLE
 
 
 
-func _weapon_fire():
+func _weapon_fire(delta):
 	while state == SHOOTING :
-		print("shooting with my weapon :)")
-		playGunShot()
-		var damageHitscan = hitscan.instantiate()
-		damageHitscan.transform.origin = $hitscanOrigin.transform.origin
-		add_child(damageHitscan)
-		await get_tree().create_timer(fireInterval).timeout
-		
+		#print(timer.time_left)
+		if timer.time_left == 0 :
+		#print("shooting with my weapon :)")
+			playGunShot()
+			var damageHitscan = hitscan.instantiate()
+			damageHitscan.transform.origin = $hitscanOrigin.transform.origin
+			add_child(damageHitscan)
+			timer.start(fireInterval)
+			readyForFire = false
+		await get_tree().create_timer(delta).timeout
+
+
+func _on_timer_timeout() -> void:
+	readyForFire = true
+	timer.stop()
