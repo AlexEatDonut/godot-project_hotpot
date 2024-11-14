@@ -23,8 +23,7 @@ func _physics_process(delta: float) -> void:
 		if is_colliding():
 			var target = get_collider()
 			hasTriggered = true
-			#print(target.get_collision_layer())
-			#Collision layer is the world
+			print(target.get_collision_layer())
 			#CODE THAT NEEDS REWRITE : DETECT WHICH LAYER IT IS DETECTING WITH
 			#if target.get_collision_layer() == 401:
 				#pass
@@ -38,5 +37,5 @@ func _on_collide_body(collider: Variant) -> void:
 	#this is a hacky way to get around the hitbox system i have put in place. 
 	#I should call upon signals or some other ways later 
 	var target = collider.get_parent_node_3d() 
-	if target.is_in_group("enemy"):
+	if target.is_in_group("Enemy"):
 		target._decrease_health(weaponDamage)

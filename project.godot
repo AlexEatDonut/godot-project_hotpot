@@ -33,6 +33,11 @@ movie_writer/movie_file="C:/Users/logan/OneDrive/Documents/Godot Projects/Simple
 
 enabled=PackedStringArray("res://addons/godotvmf/plugin.cfg")
 
+[global_group]
+
+Player=""
+Enemy=""
+
 [input]
 
 left={
@@ -130,6 +135,7 @@ click={
 3d_physics/layer_7="NeutralDamage"
 3d_physics/layer_8="PlayerHurtbox"
 3d_physics/layer_9="EnemyHurtbox"
+3d_physics/layer_10="DetectionRange"
 
 [physics]
 
