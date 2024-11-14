@@ -19,18 +19,18 @@ var respawningPickup = false :
 signal pickup_RespawnStart
 signal pickup_RespawnEnd
 
-func _ready() -> void:
-	match entityType:
-		0:
-			print("spawned entity : generic")
-		1:
-			print("spawned entity : pickup")
-			print(str(healthRatio))
-			print(str(ammoRatio))
-		2:
-			print("spawned entity : consumable")
-		3:
-			print("spawned entity : weapon")
+#func _ready() -> void:
+	#match entityType:
+		#0:
+			#print("spawned entity : generic")
+		#1:
+			#print("spawned entity : pickup")
+			#print(str(healthRatio))
+			#print(str(ammoRatio))
+		#2:
+			#print("spawned entity : consumable")
+		#3:
+			#print("spawned entity : weapon")
 
 
 
