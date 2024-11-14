@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://datcydt1gx3u0"]
+[gd_scene load_steps=11 format=3 uid="uid://datcydt1gx3u0"]
 
 [ext_resource type="Script" path="res://entities/npcs/npc_badguy.gd" id="1_ns7rk"]
 [ext_resource type="FontFile" uid="uid://xukm84lst3g5" path="res://ZTGatha/ZTGatha-SemiBold.otf" id="1_ram25"]
@@ -21,7 +21,10 @@ albedo_color = Color(0.870588, 0.156863, 0.156863, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_7vnbc"]
 size = Vector3(0.7, 0.7, 0.35)
 
-[node name="npc_badguy" type="CharacterBody3D" groups=["enemy"]]
+[sub_resource type="SphereShape3D" id="SphereShape3D_6svnj"]
+radius = 10.0
+
+[node name="npc_badguy" type="CharacterBody3D" groups=["Enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_mask = 272
 script = ExtResource("1_ns7rk")
@@ -57,15 +60,33 @@ material_override = SubResource("StandardMaterial3D_ds1am")
 mesh = SubResource("BoxMesh_7vnbc")
 skeleton = NodePath("../..")
 
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -10)
+collision_mask = 512
+debug_shape_custom_color = Color(0.596078, 0, 0.572549, 1)
+
 [node name="EnemyStats" parent="." instance=ExtResource("4_uvri3")]
 max_health = 20
 
 [node name="THIS IS A DEV NPC" type="Node" parent="."]
 process_mode = 4
 
+[node name="SightRange" type="Area3D" parent="."]
+collision_mask = 512
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SightRange"]
+shape = SubResource("SphereShape3D_6svnj")
+
+[node name="Eyes" type="Node3D" parent="."]
+
+[node name="ShootTimer" type="Timer" parent="."]
+
 [connection signal="graceperiod_ended" from="Hitbox" to="." method="_on_hitbox_graceperiod_ended"]
 [connection signal="graceperiod_started" from="Hitbox" to="." method="_on_hitbox_graceperiod_started"]
 [connection signal="health_changed" from="EnemyStats" to="." method="_on_enemy_stats_health_changed"]
 [connection signal="no_health" from="EnemyStats" to="." method="_on_enemy_stats_no_health"]
+[connection signal="body_entered" from="SightRange" to="." method="_on_sight_range_body_entered"]
+[connection signal="body_exited" from="SightRange" to="." method="_on_sight_range_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
 
 [editable path="Hitbox"]
