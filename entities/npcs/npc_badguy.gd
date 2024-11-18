@@ -4,14 +4,18 @@ extends CharacterBody3D
 @onready var stats = $EnemyStats
 @onready var hitbox = $Hitbox
 
-@onready var raycast = $RayCast3D
+@onready var head = $NpcHeadLocation
+@onready var headXaxis = $NpcHeadLocation/headX
+@onready var raycast = $NpcHeadLocation/headX/RayCast3D
 @onready var eyes = $Eyes
 
 @onready var shoottimer = $ShootTimer
 
+
+
 var target
 
-const TURN_SPEED = 2
+const TURN_SPEED = 3
 
 enum {
 	IDLE,
@@ -21,14 +25,25 @@ enum {
 var state = IDLE
 
 func _ready():
-	pass
+	head.top_level = true
+	#pass
 
 func _process(delta):
+
 	match state:
 		IDLE:
 			pass
 		ALERT:
+			#Code : the head follows the player
+			#head.look_at(target.global_transform.origin + Vector3.UP, Vector3.UP)
+			
+			#Code : the eyes follow the player and change the head rotation (preferable i think)
 			eyes.look_at(target.global_transform.origin, Vector3.UP)
+			head.rotate_y(deg_to_rad(eyes.rotation.y * TURN_SPEED))
+			#TODO : This barely works
+			headXaxis.rotation.x = eyes.rotation.x
+			#headXaxis.rotate_x(deg_to_rad(eyes.rotation.x * TURN_SPEED))
+			#TODO : MAKE THE BODY FOLLOW THE EYES
 			rotate_y(deg_to_rad(eyes.rotation.y * TURN_SPEED))
 
 func _on_sight_range_body_entered(body: Node3D) -> void:
@@ -45,7 +60,7 @@ func _on_shoot_timer_timeout() -> void:
 	if raycast.is_colliding():
 		var hit = raycast.get_collider()
 		if hit.is_in_group("Player"):
-			print("Hit!")
+			print("has a fair shot!")
 
 
 
