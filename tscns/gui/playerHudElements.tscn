@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://3syfwb4b44pi"]
+[gd_scene load_steps=10 format=3 uid="uid://3syfwb4b44pi"]
 
 [ext_resource type="FontFile" uid="uid://beyxefwb8hwdn" path="res://ZTGatha/ZTGatha-SemiBold.ttf" id="1_b2l4f"]
 [ext_resource type="PackedScene" uid="uid://bwfoh1p1welfl" path="res://tscns/gui/pause_menu.tscn" id="1_s6t21"]
 [ext_resource type="PackedScene" uid="uid://bkgg4jqh8fajx" path="res://tscns/scene_transition.tscn" id="1_wcgtw"]
+[ext_resource type="PackedScene" uid="uid://c37huaaxmfvrc" path="res://tscns/gui/crosshair.tscn" id="2_cgdqw"]
 [ext_resource type="PackedScene" uid="uid://d0jo4itx2s7hb" path="res://tscns/gui/death_screen.tscn" id="3_oqqga"]
 
 [sub_resource type="Animation" id="Animation_4ouvh"]
@@ -61,6 +62,8 @@ _data = {
 follow_viewport_enabled = true
 
 [node name="SceneTransition" parent="." instance=ExtResource("1_wcgtw")]
+
+[node name="Crosshair" parent="." instance=ExtResource("2_cgdqw")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
