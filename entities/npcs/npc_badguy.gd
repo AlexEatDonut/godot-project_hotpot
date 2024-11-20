@@ -9,9 +9,11 @@ extends CharacterBody3D
 @onready var raycast = $NpcHeadLocation/headX/RayCast3D
 @onready var eyes = $Eyes
 
+@onready var muzzle = $NpcHeadLocation/headX/muzzle
+
 @onready var shoottimer = $ShootTimer
 
-
+@onready var projectile = preload("res://sounds/weapons/projectile.tscn")
 
 var target
 
@@ -61,7 +63,9 @@ func _on_shoot_timer_timeout() -> void:
 		var hit = raycast.get_collider()
 		if hit.is_in_group("Player"):
 			print("has a fair shot!")
-
+			var bullet = projectile.instantiate()
+			muzzle.add_child(bullet)
+			bullet.player_affiliation = false
 
 
 #HEALTH RELATED CODE

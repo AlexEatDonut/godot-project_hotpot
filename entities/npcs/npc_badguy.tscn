@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://datcydt1gx3u0"]
+[gd_scene load_steps=12 format=3 uid="uid://datcydt1gx3u0"]
 
 [ext_resource type="Script" path="res://entities/npcs/npc_badguy.gd" id="1_ns7rk"]
 [ext_resource type="FontFile" uid="uid://xukm84lst3g5" path="res://ZTGatha/ZTGatha-SemiBold.otf" id="1_ram25"]
 [ext_resource type="PackedScene" uid="uid://bg4a5flvnhv1c" path="res://tscns/generic_hit-hurt_box/hitbox.tscn" id="3_5kiv5"]
 [ext_resource type="PackedScene" uid="uid://dopwp0etou4cy" path="res://Scripts/enemy_stats.tscn" id="4_uvri3"]
+[ext_resource type="ArrayMesh" uid="uid://cb60y0dxdei6q" path="res://obj-models/char_attempt/char_attempt.obj" id="5_qbk44"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kuily"]
 radius = 0.35
@@ -48,6 +49,7 @@ shape = SubResource("CapsuleShape3D_kuily")
 shape = SubResource("CapsuleShape3D_kuily")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ldam2")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -64,8 +66,12 @@ debug_shape_custom_color = Color(0.596078, 0, 0.572549, 1)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NpcHeadLocation/headX"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.20288)
 material_override = SubResource("StandardMaterial3D_ds1am")
+cast_shadow = 0
 mesh = SubResource("BoxMesh_7vnbc")
 skeleton = NodePath("")
+
+[node name="muzzle" type="Marker3D" parent="NpcHeadLocation/headX"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.530238)
 
 [node name="Eyes" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -89,6 +95,11 @@ shape = SubResource("SphereShape3D_6svnj")
 
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.45
+
+[node name="CharAttempt_model" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -1, 0)
+visible = false
+mesh = ExtResource("5_qbk44")
 
 [connection signal="graceperiod_ended" from="Hitbox" to="." method="_on_hitbox_graceperiod_ended"]
 [connection signal="graceperiod_started" from="Hitbox" to="." method="_on_hitbox_graceperiod_started"]

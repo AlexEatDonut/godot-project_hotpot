@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cf2t718ga47bf"]
+
+[ext_resource type="Script" path="res://sounds/weapons/projectile.gd" id="1_sul3f"]
+[ext_resource type="PackedScene" uid="uid://basmsjh6o3bg2" path="res://tscns/generic_hit-hurt_box/hurtbox.tscn" id="2_087ck"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ku57d"]
+radius = 0.06
+height = 0.12
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j68ky"]
+radius = 0.05
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qftae"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6h245"]
+material = SubResource("StandardMaterial3D_qftae")
+radius = 0.05
+height = 0.1
+
+[node name="Projectile" type="RigidBody3D"]
+collision_layer = 256
+collision_mask = 0
+mass = 0.125
+gravity_scale = 0.0
+script = ExtResource("1_sul3f")
+
+[node name="hurtbox" parent="." instance=ExtResource("2_087ck")]
+damage = 10
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="hurtbox"]
+shape = SubResource("CapsuleShape3D_ku57d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_j68ky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_6h245")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="hurtbox"]
