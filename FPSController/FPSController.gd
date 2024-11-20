@@ -552,10 +552,14 @@ func negativeToPositive(number):
 
 func hud_reduce_hp():
 	player_hp_hud.text = str(Playerinfo.health)
+	var playerHurtSnd = preload("res://sounds/player/player_hurt.tscn").instantiate()
+	get_tree().current_scene.add_child(playerHurtSnd)
 	hudAnimationPlayer.play("hp_takeDamage")
 
 func hud_give_hp():
 	player_hp_hud.text = str(Playerinfo.health)
+	var playerHealSnd = preload("res://sounds/player/health_gained.tscn").instantiate()
+	get_tree().current_scene.add_child(playerHealSnd)
 	hudAnimationPlayer.play("hp_getHealth")
 
 func player_take_damage(damage):
@@ -564,8 +568,6 @@ func player_take_damage(damage):
 		Playerinfo.decrease_health(damage_rounded, 1)
 		#print("damage rounded ended up at :" + str(damage_rounded))
 		hud_reduce_hp()
-		var playerHurtSnd = preload("res://sounds/player/player_hurt.tscn").instantiate()
-		get_tree().current_scene.add_child(playerHurtSnd)
 
 func player_give_health(health, ratio):
 	var health_rounded = round(health)
@@ -574,7 +576,7 @@ func player_give_health(health, ratio):
 
 func _on_hitbox_area_entered(area: Area3D) -> void:
 	player_take_damage(area.damage)
-	hitbox.start_graceperiod(0.075)
+	hitbox.start_graceperiod(0.25)
 
 #CODE FOR GRACE PERIODS
 func _on_hitbox_graceperiod_started() -> void:
