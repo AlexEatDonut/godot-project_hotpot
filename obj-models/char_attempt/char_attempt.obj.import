@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cb60y0dxdei6q"
+path="res://.godot/imported/char_attempt.obj-0106cdfd58b52a2d6914b813e2840e7e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/char_attempt.obj-0106cdfd58b52a2d6914b813e2840e7e.mesh"]
+
+source_file="res://obj-models/char_attempt/char_attempt.obj"
+dest_files=["res://.godot/imported/char_attempt.obj-0106cdfd58b52a2d6914b813e2840e7e.mesh", "res://.godot/imported/char_attempt.obj-0106cdfd58b52a2d6914b813e2840e7e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
