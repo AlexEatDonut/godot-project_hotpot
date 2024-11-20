@@ -52094,7 +52094,7 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_126v4")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_wvft8")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g5jbt")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mcrrb")
-text = "Surfing"
+text = "Standard arena"
 
 [node name="btn-arena" type="Button" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
