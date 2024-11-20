@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://basmsjh6o3bg2"]
+
+[ext_resource type="Script" path="res://tscns/generic_hit-hurt_box/hurtbox.gd" id="1_sjp54"]
+
+[node name="hurtbox" type="Area3D"]
+collision_layer = 12
+collision_mask = 64
+script = ExtResource("1_sjp54")
