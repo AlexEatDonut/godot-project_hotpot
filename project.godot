@@ -136,6 +136,7 @@ click={
 3d_physics/layer_8="PlayerHurtbox"
 3d_physics/layer_9="EnemyHurtbox"
 3d_physics/layer_10="DetectionRange"
+3d_physics/layer_11="InteractShape"
 
 [physics]
 
