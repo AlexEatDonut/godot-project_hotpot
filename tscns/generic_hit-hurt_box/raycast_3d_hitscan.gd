@@ -1,7 +1,7 @@
 extends RayCast3D
 
 @export var playerHitscan : bool = true
-@export var weaponDamage = 10
+@export var damage : float
 
 var hasTriggered:bool = false
 
@@ -38,4 +38,4 @@ func _on_collide_body(collider: Variant) -> void:
 	#I should call upon signals or some other ways later 
 	var target = collider.get_parent_node_3d() 
 	if target.is_in_group("Enemy"):
-		target._decrease_health(weaponDamage)
+		target._decrease_health(damage)

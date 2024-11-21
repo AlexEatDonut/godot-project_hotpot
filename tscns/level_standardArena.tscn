@@ -11,11 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://cwxttgf1xbejo" path="res://examples/entities/light_environment.tscn" id="12_ht21m"]
 [ext_resource type="PackedScene" uid="uid://cx3saydh4cxhk" path="res://examples/entities/func_brush.tscn" id="14_awdci"]
 [ext_resource type="Material" uid="uid://bjrhf6px1waym" path="res://examples/materials/dev/dev_measuregeneric01.tres" id="15_5ejnx"]
-[ext_resource type="PackedScene" uid="uid://dod12a2wormh0" path="res://entities/items/item_medkit_medium.tscn" id="16_83j2j"]
+[ext_resource type="PackedScene" uid="uid://dod12a2wormh0" path="res://entities/items/pickups/item_medkit_medium.tscn" id="16_83j2j"]
 [ext_resource type="Material" uid="uid://bkv30owb00i0d" path="res://examples/materials/dev/reflectivity_40.tres" id="16_gcty6"]
-[ext_resource type="PackedScene" uid="uid://4syoa188ad1b" path="res://entities/items/item_medkit_full.tscn" id="16_owcwn"]
+[ext_resource type="PackedScene" uid="uid://4syoa188ad1b" path="res://entities/items/pickups/item_medkit_full.tscn" id="16_owcwn"]
 [ext_resource type="Material" uid="uid://bvuxjor5v4uxg" path="res://examples/materials/dev/reflectivity_20.tres" id="17_6pmdo"]
-[ext_resource type="PackedScene" uid="uid://das7yjx2h1ne8" path="res://entities/items/item_medkit_small.tscn" id="17_g2grh"]
+[ext_resource type="PackedScene" uid="uid://das7yjx2h1ne8" path="res://entities/items/pickups/item_medkit_small.tscn" id="17_g2grh"]
 [ext_resource type="PackedScene" uid="uid://datcydt1gx3u0" path="res://entities/npcs/npc_badguy.tscn" id="18_76cwh"]
 [ext_resource type="PackedScene" uid="uid://f6kx848g5bco" path="res://FPSController/FPSController.tscn" id="18_ycbl3"]
 
@@ -1014,7 +1014,7 @@ vmf = "D:/SteamLibrary/steamapps/SourceMods/GodotVMF/maps/aed_standardarena.vmf"
 mesh = ExtResource("2_oa6jr")
 
 [node name="Geometry_col" type="StaticBody3D" parent="NavigationRegion3D/VMFNode/Geometry"]
-collision_layer = 497
+collision_layer = 1521
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/VMFNode/Geometry/Geometry_col"]
