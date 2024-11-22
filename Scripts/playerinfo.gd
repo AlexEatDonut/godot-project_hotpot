@@ -15,6 +15,8 @@ extends Node
 
 @export var godmode : bool = false
 
+var playerIsDead : bool = false
+
 var health = max_health  :
 	get: 
 		return health

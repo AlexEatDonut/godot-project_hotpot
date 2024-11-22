@@ -102,7 +102,7 @@ func _unhandled_input(event : InputEvent):
 		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 	
-	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED :
 		if event is InputEventMouseMotion:
 			if camera_style == CameraStyle.THIRD_PERSON_FREE_LOOK:
 				# Rotate the camera orbit rather than the player with mouse in free look mode
@@ -511,7 +511,7 @@ func _physics_process(delta):
 	
 	_handle_crouch(delta)
 	
-	if not _handle_noclip(delta) and not _handle_ladder_physics():
+	if not _handle_noclip(delta) and not _handle_ladder_physics() and Playerinfo.playerIsDead == false :
 		if not _handle_water_physics(delta):
 			if is_on_floor() or _snapped_to_stairs_last_frame:
 				if Input.is_action_just_pressed("jump") or (auto_bhop and Input.is_action_pressed("jump")):
