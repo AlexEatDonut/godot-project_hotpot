@@ -13,7 +13,7 @@ extends CharacterBody3D
 
 @onready var shoottimer = $ShootTimer
 
-@onready var projectile = preload("res://sounds/weapons/projectile.tscn")
+@onready var projectile = preload("res://entities/weapons/projectile.tscn")
 
 var target
 
@@ -64,8 +64,10 @@ func _on_shoot_timer_timeout() -> void:
 		if hit.is_in_group("Player"):
 			print("has a fair shot!")
 			var bullet = projectile.instantiate()
-			muzzle.add_child(bullet)
 			bullet.player_affiliation = false
+			muzzle.add_child(bullet)
+			
+			
 
 
 #HEALTH RELATED CODE
