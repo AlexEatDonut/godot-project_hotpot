@@ -20,6 +20,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if hasTriggered != true:
+		force_raycast_update()
 		if is_colliding():
 			var target = get_collider()
 			hasTriggered = true
@@ -31,7 +32,8 @@ func _physics_process(delta: float) -> void:
 				#emit_signal("collide_body", target)
 			#print(target)
 			emit_signal("collide_body", target)
-			
+	else :
+		set_physics_process(false)
 
 func _on_collide_body(collider: Variant) -> void:
 	#this is a hacky way to get around the hitbox system i have put in place. 
