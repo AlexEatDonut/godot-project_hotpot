@@ -33,6 +33,15 @@ movie_writer/movie_file="C:/Users/logan/OneDrive/Documents/Godot Projects/Simple
 
 enabled=PackedStringArray("res://addons/godotvmf/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://FPSController/": "blue",
+"res://entities/": "orange",
+"res://placeholders/": "red",
+"res://sounds/": "yellow"
+}
+
 [global_group]
 
 Player=""
@@ -141,7 +150,7 @@ click={
 [physics]
 
 3d/physics_engine="GodotPhysics3D"
-3d/default_gravity=20.0
+3d/default_gravity=22.0
 
 [rendering]
 
