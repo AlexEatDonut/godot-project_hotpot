@@ -2,11 +2,13 @@ extends Node3D
 
 @export var WEAPON_INFO : WeaponResource
 
-var readyForFire = true
+var readyForFire := true
 var deltaTime:float
-var state = IDLE 
+var state := IDLE 
 #preloading the raycast to call upon it later
-var hitscan = preload("res://tscns/generic_hit-hurt_box/raycast3d_hitscan.tscn")
+#var hitscan = preload("res://tscns/generic_hit-hurt_box/raycast3d_hitscan.tscn")
+var hitscan = preload("res://entities/weapons/projectile_raycast.tscn")
+
 
 enum{
 	IDLE,
@@ -47,6 +49,7 @@ func _weapon_fire(delta):
 		#print("shooting with my weapon :)")
 			playGunShot()
 			var damageHitscan = hitscan.instantiate()
+			damageHitscan.player_affiliation = true
 			damageHitscan.damage = WEAPON_INFO.damage
 			damageHitscan.transform.origin = $hitscanOrigin.transform.origin
 			add_child(damageHitscan)
