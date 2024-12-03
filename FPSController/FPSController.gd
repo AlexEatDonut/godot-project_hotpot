@@ -27,9 +27,10 @@ var headbob_time := 0.0
 @export var air_move_speed := 500.0
 
 # Code related to fall damage.
+
 # Threshhold is the vertical velocity (Y) 
 # The coefficient is remnant code from tests to get the fall damage at a sweet spot 
-@export var fall_damage_threshold := 16
+@export var fall_damage_threshold := 17
 #var fall_damage_coef : int = ProjectSettings.get_setting("physics/3d/default_gravity")/2
 
 @export var swim_up_speed := 10.0
@@ -532,14 +533,29 @@ func _physics_process(delta):
 				if old_vel < 0 && is_on_floor() == true:
 					var diff = velocity.y - old_vel
 					if diff > fall_damage_threshold :
-						var base_fall_damage = (diff - fall_damage_threshold)*2
-						#print(base_fall_damage)
-						#print(diff)
-						if diff >= 40 :
-							base_fall_damage = base_fall_damage * (diff / 20)
+						var base_fall_damage = (diff - (fall_damage_threshold/3))*1.5
+						print(base_fall_damage)
+						print(diff)
+						#cushionning of base fall damage for later calculous
+						base_fall_damage = base_fall_damage * (diff / 20)
+						#adding other velocities in the equasion to add *slightly* more damage (usually never taken into account cause never higher than one)
 						var fall_damage_other_velocities = clamp((negativeToPositive(ceil(velocity.x))+1)/8 + (negativeToPositive(ceil(velocity.z))+1)/8, 0, 5)
-						var fall_damage = base_fall_damage + fall_damage_other_velocities
-						player_take_damage(clamp(fall_damage, 3, 128))
+						print(fall_damage_other_velocities)
+						#setup variable
+						var fall_damage = 0
+						if  diff > fall_damage_threshold && diff < 24 :
+							fall_damage = base_fall_damage + fall_damage_other_velocities
+							#damage is calculated normally
+						elif   diff >= 24 && diff < 32 :
+							fall_damage = (base_fall_damage + fall_damage_other_velocities) * 1.5
+							#damage is multiplied by 1.5 once
+						elif   diff >= 32 && diff <= 40 :
+							fall_damage = (base_fall_damage + fall_damage_other_velocities) * 1.5 * 1.5
+							#damage is multiplied by 1.5 twice
+						elif diff < 40 :
+							fall_damage = (base_fall_damage + fall_damage_other_velocities) * 1.5 * 1.5 * 1.5
+							#damage is multiplied by 1.5 thrice (deadly)
+						player_take_damage(clamp(fall_damage, 3, 100))
 				old_vel = velocity.y
 	
 	_slide_camera_smooth_back_to_origin(delta)
