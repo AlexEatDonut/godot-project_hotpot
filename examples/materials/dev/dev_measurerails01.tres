@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bt1qf8lldj0km" path="res://examples/materials/dev/dev_measurerails01.texture.tres" id="1_ccopj"]
 
 [resource]
-transparency = 1
-cull_mode = 2
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 1
 albedo_texture = ExtResource("1_ccopj")
 emission = Color(1, 1, 1, 1)
 detail_blend_mode = 3

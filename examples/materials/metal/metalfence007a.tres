@@ -7,8 +7,8 @@
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_texture = ExtResource("1_led0q")
+metallic = 1.0
 emission = Color(1, 1, 1, 1)
 detail_enabled = true
 detail_mask = ExtResource("2_pyr33")
