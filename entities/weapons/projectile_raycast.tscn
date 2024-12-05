@@ -2,21 +2,19 @@
 
 [ext_resource type="Script" path="res://entities/weapons/projectile_raycast.gd" id="1_ttk0i"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_jdykn"]
-top_radius = 0.0
-bottom_radius = 0.06
-height = 0.5
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n82i5"]
+radius = 0.025
+height = 0.1
 
 [node name="Projectile_raycast" type="RayCast3D"]
 collision_mask = 448
 collide_with_areas = true
 debug_shape_custom_color = Color(0.984314, 1, 0, 1)
-debug_shape_thickness = 5
 script = ExtResource("1_ttk0i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-mesh = SubResource("CylinderMesh_jdykn")
+mesh = SubResource("CapsuleMesh_n82i5")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0
