@@ -7,7 +7,7 @@ class_name PlayerFPSController
 @export var look_sensitivity : float = 0.006
 @export var controller_look_sensitivity := 0.05
 
-@export var jump_velocity := 9.0
+@export var jump_velocity := 6.5
 @export var auto_bhop := true
 
 const HEADBOB_MOVE_AMOUNT = 0.06
@@ -15,8 +15,8 @@ const HEADBOB_FREQUENCY = 2.4
 var headbob_time := 0.0
 
 # Ground movement settings
-@export var walk_speed := 5.0
-@export var sprint_speed := 8.5
+@export var walk_speed := 4
+@export var sprint_speed := 7
 @export var ground_accel := 11.0
 @export var ground_decel := 7.0
 @export var ground_friction := 3.5
@@ -30,11 +30,11 @@ var headbob_time := 0.0
 
 # Threshhold is the vertical velocity (Y) 
 # The coefficient is remnant code from tests to get the fall damage at a sweet spot 
-@export var fall_damage_threshold := 17
+@export var fall_damage_threshold := 15 
 #var fall_damage_coef : int = ProjectSettings.get_setting("physics/3d/default_gravity")/2
 
 @export var swim_up_speed := 10.0
-@export var climb_speed := 7.0
+@export var climb_speed := 8.0
 
 # Camera options
 enum CameraStyle {
@@ -381,7 +381,7 @@ func _handle_water_physics(delta) -> bool:
 	
 	return true
 
-@onready var _original_capsule_height = $CollisionShape3D.shape.height
+@onready var _original_capsule_height = $PlayerCollisionHull.shape.height
 func _handle_crouch(delta) -> void:
 	var was_crouched_last_frame = is_crouched
 	if Input.is_action_pressed("crouch"):
@@ -402,20 +402,20 @@ func _handle_crouch(delta) -> void:
 		%Head.position.y = clampf(%Head.position.y, -CROUCH_TRANSLATE, 0)
 	
 	%Head.position.y = move_toward(%Head.position.y, -CROUCH_TRANSLATE if is_crouched else 0.0, 7.0 * delta)
-	$CollisionShape3D.shape.height = _original_capsule_height - CROUCH_TRANSLATE if is_crouched else _original_capsule_height
-	$CollisionShape3D.position.y = $CollisionShape3D.shape.height / 2
+	$PlayerCollisionHull.shape.height = _original_capsule_height - CROUCH_TRANSLATE if is_crouched else _original_capsule_height
+	$PlayerCollisionHull.position.y = $PlayerCollisionHull.shape.height / 2
 	# Visual for tutorial
-	#$WorldModel/MeshInstance3D.mesh.height = $CollisionShape3D.shape.height
-	#$WorldModel/MeshInstance3D.position.y = $CollisionShape3D.position.y
-	#$WorldModel/WigglyHair.position.y = $CollisionShape3D.shape.height - 0.302
-	#$"WorldModel/disguise-glasses".position.y = $CollisionShape3D.shape.height - 0.9
+	#$WorldModel/MeshInstance3D.mesh.height = $PlayerCollisionHull.shape.height
+	#$WorldModel/MeshInstance3D.position.y = $PlayerCollisionHull.position.y
+	#$WorldModel/WigglyHair.position.y = $PlayerCollisionHull.shape.height - 0.302
+	#$"WorldModel/disguise-glasses".position.y = $PlayerCollisionHull.shape.height - 0.9
 
 func _handle_noclip(delta) -> bool:
 	if Input.is_action_just_pressed("_noclip") and OS.has_feature("debug"):
 		noclip = !noclip
 		noclip_speed_mult = 3.0
 	
-	$CollisionShape3D.disabled = noclip
+	$PlayerCollisionHull.disabled = noclip
 	
 	if not noclip:
 		return false
