@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgulaqbea2hv"]
 
 [ext_resource type="PackedScene" uid="uid://bea0qweic16li" path="res://sounds/weapons/weapon_fire.tscn" id="1_c5wnb"]
-[ext_resource type="AudioStream" uid="uid://dm5vx0rfwew35" path="res://placeholders/hl2pistol_placeholder.mp3" id="2_7tl3j"]
+[ext_resource type="AudioStream" uid="uid://4ltdxoambhm2" path="res://placeholders/385811__morganpurkis__single-pistol-gunshot-3.wav" id="2_wl5e4"]
 
 [node name="gun_test" instance=ExtResource("1_c5wnb")]
-stream = ExtResource("2_7tl3j")
-volume_db = -8.0
+stream = ExtResource("2_wl5e4")
+volume_db = -15.0
 autoplay = true
