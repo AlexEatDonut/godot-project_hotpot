@@ -1,0 +1,165 @@
+[gd_scene load_steps=18 format=3 uid="uid://bqf4bn8cv5m2i"]
+
+[ext_resource type="Script" path="res://addons/godotvmf/utils/VMFNode.gd" id="1_f5f4f"]
+[ext_resource type="ArrayMesh" uid="uid://bocr78ne2s1di" path="res://examples/geometry/main_menu_dev_vmf_import.mesh" id="2_7cef2"]
+[ext_resource type="Shape3D" uid="uid://b6erwyy22jf0b" path="res://examples/geometry/main_menu_dev_vmf_collision_import.res" id="3_w6l0b"]
+[ext_resource type="PackedScene" uid="uid://cwxttgf1xbejo" path="res://examples/entities/light_environment.tscn" id="4_gl7uq"]
+[ext_resource type="PackedScene" uid="uid://b4qfhlf65tlvm" path="res://models/fab/campfire_uenpfeifa_mid/Campfire_uenpfeifa_Mid.tscn" id="7_28cqe"]
+[ext_resource type="PackedScene" uid="uid://f6kx848g5bco" path="res://FPSController/FPSController.tscn" id="7_84min"]
+[ext_resource type="PackedScene" uid="uid://ca0wevg1lb4rx" path="res://utils/WaterMaker3D/WaterMaker3D.tscn" id="7_gh7fi"]
+[ext_resource type="PackedScene" uid="uid://bbmw1bjkj5jld" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid.tscn" id="8_440db"]
+[ext_resource type="PackedScene" uid="uid://ceyjsp7i4s6c2" path="res://models/fab/massive_nordic_coastal_cliff_vfmjadufa_mid/Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid.tscn" id="9_2sluq"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ykw1v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dla2n"]
+sky_top_color = Color(0.32549, 0.407843, 0.509804, 1)
+sky_horizon_color = Color(0.168627, 0.176471, 0.223529, 1)
+ground_bottom_color = Color(0.168627, 0.176471, 0.223529, 1)
+ground_horizon_color = Color(0.168627, 0.176471, 0.223529, 1)
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_5msxt"]
+sky_material = SubResource("ProceduralSkyMaterial_dla2n")
+
+[sub_resource type="Environment" id="Environment_j0key"]
+background_mode = 2
+sky = SubResource("Sky_5msxt")
+sky_custom_fov = 30.9
+ambient_light_source = 2
+ambient_light_color = Color(0.168627, 0.176471, 0.223529, 1)
+ssao_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.168627, 0.176471, 0.223529, 1)
+fog_density = 0.0035
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_84ipi"]
+resource_local_to_scene = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_mb16m"]
+resource_local_to_scene = true
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_84ipi")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8adb0"]
+resource_local_to_scene = true
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_84ipi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlxdj"]
+resource_local_to_scene = true
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+albedo_color = Color(0.309804, 0.541176, 0.866667, 0.388235)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_mb16m")
+refraction_enabled = true
+refraction_texture = SubResource("NoiseTexture2D_8adb0")
+uv1_scale = Vector3(0.04, 0.04, 0.04)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ykw1v")
+
+[node name="VMFNode" type="Node3D" parent="NavigationRegion3D"]
+script = ExtResource("1_f5f4f")
+use_external_file = true
+vmf = "D:/SteamLibrary/steamapps/SourceMods/GodotVMF/maps/main_menu_dev.vmf"
+
+[node name="Geometry" type="MeshInstance3D" parent="NavigationRegion3D/VMFNode"]
+mesh = ExtResource("2_7cef2")
+
+[node name="Geometry_col" type="StaticBody3D" parent="NavigationRegion3D/VMFNode/Geometry"]
+collision_layer = 2033
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/VMFNode/Geometry/Geometry_col"]
+shape = ExtResource("3_w6l0b")
+
+[node name="Models" type="Node3D" parent="NavigationRegion3D/VMFNode"]
+
+[node name="Entities" type="Node3D" parent="NavigationRegion3D/VMFNode"]
+
+[node name="light_environment" parent="NavigationRegion3D/VMFNode/Entities" instance=ExtResource("4_gl7uq")]
+transform = Transform3D(-0.965926, -0.198267, 0.166366, 0, 0.642788, 0.766044, -0.258819, 0.739942, -0.620885, -0.8, 1.28, -2.4)
+entity = {
+"SunSpreadAngle": 0,
+"_AmbientScaleHDR": 1,
+"_ambient": {
+"a": 0.0392157,
+"b": 0.223529,
+"g": 0.176471,
+"r": 0.168627
+},
+"_ambientHDR": {
+"a": 0.00392157,
+"b": -0.00392157,
+"g": -0.00392157,
+"r": -0.00392157
+},
+"_light": {
+"a": 0.0392157,
+"b": 0.937255,
+"g": 0.901961,
+"r": 0.686275
+},
+"_lightHDR": {
+"a": 0.00392157,
+"b": -0.00392157,
+"g": -0.00392157,
+"r": -0.00392157
+},
+"_lightscaleHDR": 1,
+"angles": Vector3(0, 255, 0),
+"classname": "light_environment",
+"editor": {
+"color": Vector3(220, 30, 220),
+"logicalpos": "[0 -5768]",
+"visgroupautoshown": 1,
+"visgroupshown": 1
+},
+"id": 935,
+"origin": Vector3(-0.8, 1.28, -2.4),
+"pitch": -50,
+"vmf": "D:/SteamLibrary/steamapps/SourceMods/GodotVMF/maps/main_menu_dev.vmf"
+}
+
+[node name="DirectionalLight3D" parent="NavigationRegion3D/VMFNode/Entities/light_environment" index="0"]
+transform = Transform3D(1, -1.49012e-08, 1.49012e-08, 1.49012e-08, 1, -2.98023e-08, 0, 5.96046e-08, 1, -0.220215, 0.629576, -0.528277)
+light_color = Color(0.686275, 0.901961, 0.937255, 1)
+light_energy = 0.0392157
+
+[node name="NonVMF_Entities" type="Node3D" parent="."]
+
+[node name="Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid" parent="NonVMF_Entities" instance=ExtResource("8_440db")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -14.1981, -0.741954, -7.72444)
+
+[node name="Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid" parent="NonVMF_Entities" instance=ExtResource("9_2sluq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2134, -1.03971, -16.0428)
+
+[node name="Campfire_uenpfeifa_Mid" parent="NonVMF_Entities" instance=ExtResource("7_28cqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26067, -1.19209e-07, -4.91261)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="NonVMF_Entities"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26067, 0.421619, -4.91261)
+light_color = Color(1, 0.670588, 0, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j0key")
+
+[node name="FPSController" parent="." instance=ExtResource("7_84min")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813572, 15.36, 4.67515)
+
+[node name="WaterMaker3D" parent="." instance=ExtResource("7_gh7fi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.16211, 0)
+size = Vector3(41, 6, 41)
+material = SubResource("StandardMaterial3D_dlxdj")
+
+[editable path="NavigationRegion3D/VMFNode/Entities/light_environment"]
