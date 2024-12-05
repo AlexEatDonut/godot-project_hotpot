@@ -40,9 +40,9 @@ func set_max_health(value):
 	emit_signal("max_health_changed", max_health)
 
 func decrease_health(healthTaken, ratio):
-	var predamage_health = Playerinfo.health
+	#var predamage_health = Playerinfo.health
 	var healthDamage = healthTaken * ratio
-	Playerinfo.health -= healthTaken
+	Playerinfo.health -= healthDamage
 	emit_signal("health_decreased")
 	
 func increase_health(healthGiven, ratio):
