@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://b1yq6k2p7lcg"]
+
+[ext_resource type="Texture2D" uid="uid://74d43vpprm14" path="res://models/fab/massive_nordic_coastal_cliff_vfmjadufa_mid/Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid_2K_BaseColor.jpg" id="1_o8cqt"]
+[ext_resource type="Texture2D" uid="uid://r5pmqags4xj" path="res://models/fab/massive_nordic_coastal_cliff_vfmjadufa_mid/Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid_2K_AO.jpg" id="2_m8msm"]
+[ext_resource type="Texture2D" uid="uid://54vfcibd7ov7" path="res://models/fab/massive_nordic_coastal_cliff_vfmjadufa_mid/Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid_2K_Normal.jpg" id="3_via3n"]
+[ext_resource type="Texture2D" uid="uid://o7813gpvnnc4" path="res://models/fab/massive_nordic_coastal_cliff_vfmjadufa_mid/Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid_2K_Roughness.jpg" id="4_0rrwm"]
+
+[resource]
+albedo_texture = ExtResource("1_o8cqt")
+roughness_texture = ExtResource("4_0rrwm")
+normal_enabled = true
+normal_texture = ExtResource("3_via3n")
+ao_enabled = true
+ao_texture = ExtResource("2_m8msm")

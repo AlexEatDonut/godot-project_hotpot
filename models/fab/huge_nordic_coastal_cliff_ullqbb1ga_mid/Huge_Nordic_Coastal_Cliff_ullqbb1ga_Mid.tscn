@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://bbmw1bjkj5jld"]
+[gd_scene load_steps=7 format=4 uid="uid://bbmw1bjkj5jld"]
 
-[ext_resource type="Texture2D" uid="uid://cpb40dwslm2qb" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_BaseColor.jpg" id="1_kohr2"]
-[ext_resource type="Texture2D" uid="uid://dm8ljgt0et0gs" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_AO.jpg" id="2_c63fc"]
-[ext_resource type="Texture2D" uid="uid://cjvrsitlfsvvk" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_Normal.jpg" id="3_bn4qx"]
-[ext_resource type="Texture2D" uid="uid://fyqr6hhodlcc" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_Gloss.jpg" id="4_q7bds"]
+[ext_resource type="Material" uid="uid://cl8pqxii6jobw" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid.tres" id="1_06sqc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxwme"]
 resource_name = "MatID_1"
@@ -45,19 +42,23 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6pllt")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djws6"]
-albedo_texture = ExtResource("1_kohr2")
-normal_enabled = true
-normal_scale = 1.5
-normal_texture = ExtResource("3_bn4qx")
-ao_enabled = true
-ao_texture = ExtResource("2_c63fc")
-refraction_enabled = true
-refraction_texture = ExtResource("4_q7bds")
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nlg8y"]
+points = PackedVector3Array(4.11225, 2.12798, 1.29015, -4.22298, 0.149519, -1.77005, -6.58904, 1.78273, 2.32192, 6.23315, -0.636188, 1.83786, -6.1055, -0.878172, 0.387234, -7.07258, 2.267, -0.339121, 2.77575, 0.145494, -1.78777, 3.08786, 2.267, 3.04775, -7.79865, -0.636188, -1.54902, 4.78253, 2.02471, -0.0973502, 5.99214, -0.636188, 0.144942, 7.20175, 0.814792, 0.144942, -2.95869, 1.78273, 3.04775, -5.37943, -0.15222, 1.59609, -5.86297, 2.267, 2.56369, 2.02795, 2.06966, -0.641012, -8.04118, -0.15222, -0.0973502, -3.68476, -0.636188, -1.79079, 3.81393, -0.15222, 2.32192, 6.95922, 0.573732, 1.83786, -7.31511, 1.78273, -0.823184, -6.1055, -0.878172, -1.30673, 7.44428, -0.394204, 0.628483, -7.07258, 0.331748, 1.59609, 1.6342, 2.02471, 3.29005, 6.47568, 0.573732, -0.580892, 2.47396, 1.22711, -1.29087, 6.23315, 1.54074, 0.628483, -4.65336, 2.267, -0.580892, 6.47568, -0.15222, -0.580892, 5.26607, -0.15222, 2.32192, 3.69328, 2.13586, -0.0368196)
 
-[node name="Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid" type="Node3D"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tx478"]
+points = PackedVector3Array(-4.4114, 2.26755, -0.339263, 1.63666, 2.26755, 3.53163, -5.8624, 2.99369, 3.04752, 6.47644, 6.62222, 3.28957, -4.65146, 5.4118, 2.56473, 4.31483, 2.39703, 0.499487, 4.54, 5.4118, 5.7088, 2.84628, 4.20302, 0.62962, 2.60488, 6.37981, 6.19357, 3.8145, 7.83209, 4.49985, -6.83062, 2.75128, -0.0972083, -6.34651, 2.26755, 2.32268, 3.96263, 2.47014, 2.80613, -4.89418, 5.16994, 3.28957, -4.4114, 4.20302, 0.871012, 2.60488, 2.26755, -0.581318, 3.33039, 7.83209, 5.7088, 5.74961, 5.4118, 4.74124, 6.23372, 7.1054, 4.49985, -5.1369, 2.50941, 3.04752, -0.29845, 2.99369, -0.339263, 3.57178, 2.75128, -0.339263, 4.29728, 6.37981, 6.19357, -6.58923, 3.71929, 0.871012, -1.26534, 4.20302, 0.62962, -2.23356, 6.37981, 3.53163, 3.08899, 7.34782, 6.19357, 5.02278, 5.65367, 2.08062, -4.4114, 3.96115, 3.77302, -7.07334, 2.50941, -0.0972083, -2.58001, 5.77551, 4.25855, 3.57178, 5.4118, 5.7088)
 
-[node name="ullqbb1ga_LOD0_TIER2_000" type="MeshInstance3D" parent="."]
+[node name="Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid" type="MeshInstance3D"]
+material_override = ExtResource("1_06sqc")
 mesh = SubResource("ArrayMesh_6plpe")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_djws6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 497
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nlg8y")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tx478")

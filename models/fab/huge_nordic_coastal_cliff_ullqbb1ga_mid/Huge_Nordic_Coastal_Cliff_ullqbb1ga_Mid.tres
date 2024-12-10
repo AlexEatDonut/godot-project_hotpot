@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cl8pqxii6jobw"]
+
+[ext_resource type="Texture2D" uid="uid://cpb40dwslm2qb" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_BaseColor.jpg" id="1_blc75"]
+[ext_resource type="Texture2D" uid="uid://dm8ljgt0et0gs" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_AO.jpg" id="2_valdm"]
+[ext_resource type="Texture2D" uid="uid://cjvrsitlfsvvk" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_Normal.jpg" id="3_v8hr5"]
+[ext_resource type="Texture2D" uid="uid://fyqr6hhodlcc" path="res://models/fab/huge_nordic_coastal_cliff_ullqbb1ga_mid/Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid_2K_Gloss.jpg" id="4_4drne"]
+
+[resource]
+albedo_texture = ExtResource("1_blc75")
+normal_enabled = true
+normal_scale = 1.5
+normal_texture = ExtResource("3_v8hr5")
+ao_enabled = true
+ao_texture = ExtResource("2_valdm")
+refraction_enabled = true
+refraction_texture = ExtResource("4_4drne")

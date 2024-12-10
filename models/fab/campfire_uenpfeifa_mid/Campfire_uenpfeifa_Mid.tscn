@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://b4qfhlf65tlvm"]
+[gd_scene load_steps=5 format=4 uid="uid://b4qfhlf65tlvm"]
 
-[ext_resource type="Texture2D" uid="uid://dee0coa4gnhjf" path="res://models/fab/campfire_uenpfeifa_mid/Campfire_uenpfeifa_Mid_2K_BaseColor.jpg" id="1_ew6ur"]
-[ext_resource type="Texture2D" uid="uid://cysi8oitwv53a" path="res://models/fab/campfire_uenpfeifa_mid/Campfire_uenpfeifa_Mid_2K_AO.jpg" id="2_bkf78"]
-[ext_resource type="Texture2D" uid="uid://bh8o23hboc6qq" path="res://models/fab/campfire_uenpfeifa_mid/Campfire_uenpfeifa_Mid_2K_Normal.jpg" id="3_5n3ai"]
-[ext_resource type="Texture2D" uid="uid://7ixbtanrfd28" path="res://models/fab/campfire_uenpfeifa_mid/Campfire_uenpfeifa_Mid_2K_Roughness.jpg" id="4_hsa02"]
+[ext_resource type="Material" uid="uid://b6vq8vihxoc52" path="res://models/fab/campfire_uenpfeifa_mid/Campfire_uenpfeifa_Mid.tres" id="1_vk08g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qncf"]
 resource_name = "MatID_1"
@@ -45,18 +42,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_tf5sw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctopw"]
-albedo_texture = ExtResource("1_ew6ur")
-roughness_texture = ExtResource("4_hsa02")
-normal_enabled = true
-normal_texture = ExtResource("3_5n3ai")
-ao_enabled = true
-ao_light_affect = 1.0
-ao_texture = ExtResource("2_bkf78")
-
-[node name="Campfire_uenpfeifa_Mid" type="Node3D"]
-
-[node name="uenpfeifa_LOD0_TIER2_000" type="MeshInstance3D" parent="."]
+[node name="Campfire_uenpfeifa_Mid" type="MeshInstance3D"]
 mesh = SubResource("ArrayMesh_rp3xr")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_ctopw")
+surface_material_override/0 = ExtResource("1_vk08g")
