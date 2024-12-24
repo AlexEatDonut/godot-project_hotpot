@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://ceyjsp7i4s6c2" path="res://models/fab/massive_nordic_coastal_cliff_vfmjadufa_mid/Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid.tscn" id="9_2sluq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ykw1v"]
-vertices = PackedVector3Array(15.81, -4.3, -16.69, 17.31, -4.3, -16.69, 17.06, -4.3, -60.94, 15.56, -4.3, -15.19, -60.94, -4.3, -60.94, -60.94, -4.3, -15.19, 18.06, -4.3, -16.69, 18.31, -4.3, -60.94, 19.56, -4.3, -16.69, 19.81, -4.3, -14.94, 61.06, -4.3, -15.19, 61.06, -4.3, -60.94, -5.94, 31.2, -47.69, 6.06, 31.2, -47.19, 6.06, 31.2, -47.69, -5.19, 22.2, -47.69, -5.19, 22.2, 47.56, -4.44, 22.2, 47.56, -4.44, 22.2, -47.69, -2.94, 22.2, -47.69, -2.94, 22.2, 47.56, 2.81, 22.2, 47.56, 2.81, 22.2, -47.69, 4.56, 22.2, -47.69, 4.56, 22.2, 47.56, 5.31, 22.2, 47.56, 5.31, 22.2, -47.69, -4.94, 18.2, -40.44, 4.81, 18.2, -40.19, 4.56, 18.2, -40.94, -4.69, 18.2, -40.94, -4.69, 18.2, -38.94, -4.69, 18.2, -37.69, 4.56, 18.2, -37.69, 4.56, 18.2, -38.94, -5.94, 31.2, -38.69, -5.94, 31.2, -38.19, 6.06, 31.2, -37.94, 6.06, 31.2, -38.94, -4.69, 18.2, -36.44, -4.69, 18.2, -35.94, 4.81, 18.2, -36.19, -5.94, 31.2, -29.44, -5.94, 31.2, -28.19, 6.06, 31.2, -27.94, 6.06, 31.2, -29.69, -5.94, 31.2, -19.44, -5.94, 31.2, -18.94, 6.06, 31.2, -18.69, 6.06, 31.2, -19.69, -6.44, 0.45, -3.69, -4.69, 0.7, -3.94, -4.94, -2.05, -15.69, -5.44, -0.55, -11.69, -4.815, -0.0499997, -9.815, -18.94, -1.55, 0.0600014, -7.94, 0.45, 0.0600014, -18.94, -1.05, -15.69, -18.94, -1.55, -9.96273, -13.34, -2.05, -15.69, -14.9649, -1.05, -11.9551, -13.4294, -0.3, -4.45466, -8.95493, -1.55, -13.4491, -7.42962, -0.0499997, -8.9244, -8.92483, -0.8, -11.9612, -13.4299, -1.3, -11.9441, -13.4197, -0.55, -8.91835, 4.56, 0.95, -3.94, 4.81, -2.3, -15.69, 4.6225, 0.45, -6.8775, 4.685, -0.8, -9.815, -1.45469, 0.7, -5.92933, 1.54004, -1.3, -13.432, 3.07529, 0.45, -7.45131, 1.54016, -0.8, -10.4222, -2.93994, -1.05, -11.9601, 6.06, 0.95, -3.94, 5.7475, 0.45, -6.8775, 5.435, -0.8, -9.815, 6.56, 0.95, -3.44, 8.06, 0.7, 0.0600014, 18.81, -1.55, 0.0600014, 18.81, -3.55, -15.69, 16.1225, -0.55, 0.0600014, 18.81, -2.55, -4.23545, 13.21, -2.05, -15.69, 15.0656, -0.55, -4.43762, 15.0451, -1.8, -13.4491, 16.5703, -1.8, -10.4343, 7.55035, 0.2, -7.44637, 17.31, -4.3, -10.44, 16.31, -4.3, -13.44, 15.56, -4.3, -13.94, -60.94, -4.3, -10.19, 19.81, -4.3, -8.44, 61.06, -4.3, -8.19, 19.06, -4.3, 61.06, 19.06, -4.3, -6.69, 17.56, -4.3, -8.19, -60.94, -4.3, 61.06, -5.94, 31.2, -10.19, -5.94, 31.2, -8.94, 6.06, 31.2, -8.69, 6.06, 31.2, -10.44, 19.81, -4.3, -6.94, 61.06, -4.3, 61.06, 5.31, 0.95, 2.56, 6.56, 0.95, 0.310001, 5.31, 0.95, -2.69, -5.19, 0.7, -2.69, -6.44, 0.7, -0.439999, -5.44, 0.7, 2.56, -4.69, 18.2, -1.94, 4.81, 18.2, -1.94, 4.56, 18.2, -2.44, -4.69, 18.2, -2.44, -4.69, 18.2, -0.689999, -4.69, 18.2, 0.560001, 4.56, 18.2, 0.560001, 4.56, 18.2, -0.689999, -5.94, 31.2, -0.189999, -5.94, 31.2, 0.310001, 6.06, 31.2, 0.560001, 6.06, 31.2, -0.439999, -4.94, 0.2, 15.56, -4.69, 0.45, 3.81, -6.19, 0.45, 3.81, -6.69, 0.45, 3.31, -18.94, -2.3, 15.56, -18.94, -1.3, 7.10546, -18.94, -2.3, 11.3327, -16.14, -2.05, 15.56, -9.14, -0.0499997, 15.56, -17.9544, -2.05, 10.5404, -14.9645, -0.8, 9.07448, -16.4349, -0.8, 3.0729, -10.4498, 0.2, 4.54376, 6.56, 0.7, 3.56, 4.81, 0.7, 3.81, 5.06, -0.0499997, 15.56, 5.89334, -0.0499997, 8.89334, 4.90375, -0.0499997, 8.21625, 18.81, -0.3, 15.56, 18.81, -1.3, 7.10546, 10.5653, 0.45, 7.54264, 13.5755, -0.3, 10.5684, 15.0753, -0.8, 6.04869, 12.0651, 0.2, 3.0729, 16.5357, -0.55, 13.5442, 13.5657, -0.0499997, 13.5723, -4.69, 18.2, 2.56, 4.81, 18.2, 2.31, 4.81, 18.2, 1.81, -4.94, 18.2, 1.81, -5.94, 31.2, 9.06, -5.94, 31.2, 10.06, 6.06, 31.2, 10.31, 6.06, 31.2, 8.81, -5.94, 31.2, 19.06, -5.94, 31.2, 19.56, 6.06, 31.2, 19.81, 6.06, 31.2, 18.81, -5.94, 31.2, 28.31, -5.94, 31.2, 29.31, 6.06, 31.2, 29.56, 6.06, 31.2, 28.06, -4.94, 18.2, 36.31, 4.81, 18.2, 36.56, 4.56, 18.2, 35.81, -4.69, 18.2, 35.81, -4.69, 18.2, 37.81, -4.69, 18.2, 39.06, 4.56, 18.2, 39.06, 4.56, 18.2, 37.81, -5.94, 31.2, 38.06, -5.94, 31.2, 38.56, 6.06, 31.2, 38.81, 6.06, 31.2, 37.81, -4.69, 18.2, 40.31, -4.69, 18.2, 40.81, 4.81, 18.2, 40.56, -5.94, 31.2, 47.31, 6.06, 31.2, 47.56, 6.06, 31.2, 47.06)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(1, 2, 6), PackedInt32Array(6, 2, 7), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 7), PackedInt32Array(8, 6, 7), PackedInt32Array(14, 13, 12), PackedInt32Array(18, 17, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(22, 21, 19), PackedInt32Array(19, 21, 20), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24), PackedInt32Array(30, 29, 27), PackedInt32Array(27, 29, 28), PackedInt32Array(34, 33, 31), PackedInt32Array(31, 33, 32), PackedInt32Array(35, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(41, 40, 39), PackedInt32Array(42, 45, 43), PackedInt32Array(43, 45, 44), PackedInt32Array(46, 49, 47), PackedInt32Array(47, 49, 48), PackedInt32Array(52, 54, 53), PackedInt32Array(53, 54, 51), PackedInt32Array(53, 51, 50), PackedInt32Array(59, 60, 57), PackedInt32Array(57, 60, 58), PackedInt32Array(58, 61, 55), PackedInt32Array(55, 61, 56), PackedInt32Array(56, 61, 50), PackedInt32Array(50, 63, 53), PackedInt32Array(53, 62, 52), PackedInt32Array(52, 62, 59), PackedInt32Array(59, 65, 60), PackedInt32Array(60, 66, 58), PackedInt32Array(58, 66, 61), PackedInt32Array(61, 63, 50), PackedInt32Array(63, 64, 53), PackedInt32Array(53, 64, 62), PackedInt32Array(62, 65, 59), PackedInt32Array(65, 66, 60), PackedInt32Array(66, 63, 61), PackedInt32Array(63, 66, 64), PackedInt32Array(64, 65, 62), PackedInt32Array(65, 64, 66), PackedInt32Array(68, 72, 52), PackedInt32Array(52, 75, 54), PackedInt32Array(54, 71, 51), PackedInt32Array(51, 71, 67), PackedInt32Array(67, 73, 69), PackedInt32Array(69, 73, 70), PackedInt32Array(70, 72, 68), PackedInt32Array(72, 75, 52), PackedInt32Array(75, 71, 54), PackedInt32Array(71, 73, 67), PackedInt32Array(73, 74, 70), PackedInt32Array(70, 74, 72), PackedInt32Array(72, 74, 75), PackedInt32Array(75, 74, 71), PackedInt32Array(71, 74, 73), PackedInt32Array(76, 67, 77), PackedInt32Array(77, 67, 69), PackedInt32Array(77, 69, 78), PackedInt32Array(78, 69, 70), PackedInt32Array(78, 70, 68), PackedInt32Array(76, 77, 79), PackedInt32Array(79, 77, 78), PackedInt32Array(79, 78, 68), PackedInt32Array(85, 89, 68), PackedInt32Array(68, 89, 79), PackedInt32Array(79, 86, 80), PackedInt32Array(80, 86, 83), PackedInt32Array(83, 84, 81), PackedInt32Array(84, 88, 82), PackedInt32Array(82, 87, 85), PackedInt32Array(85, 87, 89), PackedInt32Array(89, 86, 79), PackedInt32Array(86, 84, 83), PackedInt32Array(88, 87, 82), PackedInt32Array(84, 86, 88), PackedInt32Array(87, 88, 89), PackedInt32Array(89, 88, 86), PackedInt32Array(91, 90, 92), PackedInt32Array(92, 90, 93), PackedInt32Array(92, 93, 5), PackedInt32Array(5, 3, 92), PackedInt32Array(9, 10, 94), PackedInt32Array(94, 10, 95), PackedInt32Array(96, 98, 97), PackedInt32Array(98, 96, 90), PackedInt32Array(90, 96, 93), PackedInt32Array(93, 96, 99), PackedInt32Array(100, 103, 101), PackedInt32Array(101, 103, 102), PackedInt32Array(104, 94, 95), PackedInt32Array(104, 95, 97), PackedInt32Array(97, 95, 96), PackedInt32Array(96, 95, 105), PackedInt32Array(110, 109, 111), PackedInt32Array(111, 109, 108), PackedInt32Array(111, 108, 107), PackedInt32Array(111, 107, 106), PackedInt32Array(115, 114, 112), PackedInt32Array(112, 114, 113), PackedInt32Array(119, 118, 116), PackedInt32Array(116, 118, 117), PackedInt32Array(120, 123, 121), PackedInt32Array(121, 123, 122), PackedInt32Array(126, 125, 124), PackedInt32Array(127, 126, 124), PackedInt32Array(132, 136, 124), PackedInt32Array(124, 136, 127), PackedInt32Array(127, 136, 56), PackedInt32Array(56, 135, 55), PackedInt32Array(55, 135, 129), PackedInt32Array(129, 133, 130), PackedInt32Array(130, 131, 128), PackedInt32Array(131, 134, 132), PackedInt32Array(132, 134, 136), PackedInt32Array(136, 135, 56), PackedInt32Array(135, 134, 129), PackedInt32Array(133, 131, 130), PackedInt32Array(129, 134, 133), PackedInt32Array(131, 133, 134), PackedInt32Array(134, 135, 136), PackedInt32Array(138, 137, 141), PackedInt32Array(141, 137, 140), PackedInt32Array(141, 140, 139), PackedInt32Array(139, 149, 142), PackedInt32Array(142, 148, 143), PackedInt32Array(143, 146, 81), PackedInt32Array(81, 146, 83), PackedInt32Array(83, 147, 80), PackedInt32Array(80, 147, 137), PackedInt32Array(137, 144, 140), PackedInt32Array(140, 149, 139), PackedInt32Array(149, 148, 142), PackedInt32Array(148, 145, 143), PackedInt32Array(143, 145, 146), PackedInt32Array(146, 147, 83), PackedInt32Array(147, 144, 137), PackedInt32Array(144, 145, 140), PackedInt32Array(140, 145, 149), PackedInt32Array(149, 145, 148), PackedInt32Array(145, 144, 146), PackedInt32Array(146, 144, 147), PackedInt32Array(151, 150, 152), PackedInt32Array(152, 150, 153), PackedInt32Array(138, 141, 125), PackedInt32Array(125, 141, 139), PackedInt32Array(125, 139, 124), PackedInt32Array(154, 157, 155), PackedInt32Array(155, 157, 156), PackedInt32Array(158, 161, 159), PackedInt32Array(159, 161, 160), PackedInt32Array(162, 165, 163), PackedInt32Array(163, 165, 164), PackedInt32Array(169, 168, 166), PackedInt32Array(166, 168, 167), PackedInt32Array(173, 172, 170), PackedInt32Array(170, 172, 171), PackedInt32Array(174, 177, 175), PackedInt32Array(175, 177, 176), PackedInt32Array(180, 179, 178), PackedInt32Array(183, 182, 181)]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dla2n"]
 sky_top_color = Color(0.32549, 0.407843, 0.509804, 1)
@@ -73,13 +71,13 @@ navigation_mesh = SubResource("NavigationMesh_ykw1v")
 [node name="VMFNode" type="Node3D" parent="NavigationRegion3D"]
 script = ExtResource("1_f5f4f")
 use_external_file = true
-vmf = "D:/SteamLibrary/steamapps/SourceMods/GodotVMF/maps/main_menu_dev.vmf"
+vmf = "D:/Steam/steamapps/sourcemods/GodotVMF/maps/main_menu_dev.vmf"
 
 [node name="Geometry" type="MeshInstance3D" parent="NavigationRegion3D/VMFNode"]
 mesh = ExtResource("2_7cef2")
 
 [node name="Geometry_col" type="StaticBody3D" parent="NavigationRegion3D/VMFNode/Geometry"]
-collision_layer = 2033
+collision_layer = 1009
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/VMFNode/Geometry/Geometry_col"]
@@ -90,7 +88,7 @@ shape = ExtResource("3_w6l0b")
 [node name="Entities" type="Node3D" parent="NavigationRegion3D/VMFNode"]
 
 [node name="light_environment" parent="NavigationRegion3D/VMFNode/Entities" instance=ExtResource("4_gl7uq")]
-transform = Transform3D(-0.965926, -0.198267, 0.166366, 0, 0.642788, 0.766044, -0.258819, 0.739942, -0.620885, 7.36, 1.28, 5.44)
+transform = Transform3D(-0.965926, -0.198267, 0.166366, 0, 0.642788, 0.766044, -0.258819, 0.739942, -0.620885, -9.28, 1.28, 5.44)
 entity = {
 "SunSpreadAngle": 0,
 "_AmbientScaleHDR": 1,
@@ -128,31 +126,50 @@ entity = {
 "visgroupshown": 1
 },
 "id": 935,
-"origin": Vector3(7.36, 1.28, 5.44),
+"origin": Vector3(-9.28, 1.28, 5.44),
 "pitch": -50,
-"vmf": "D:/SteamLibrary/steamapps/SourceMods/GodotVMF/maps/main_menu_dev.vmf"
+"vmf": "D:/Steam/steamapps/sourcemods/GodotVMF/maps/main_menu_dev.vmf"
 }
 
 [node name="DirectionalLight3D" parent="NavigationRegion3D/VMFNode/Entities/light_environment" index="0"]
 light_color = Color(0.686275, 0.901961, 0.937255, 1)
-light_energy = 0.0392157
+light_energy = 0.04
 
 [node name="NonVMF_Entities" type="Node3D" parent="."]
 
 [node name="Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid" parent="NonVMF_Entities" instance=ExtResource("8_440db")]
-transform = Transform3D(0.589901, 0, 0.807475, 0, 1, 0, -0.807475, 0, 0.589901, -14.1981, -2.84764, -4.33244)
+transform = Transform3D(0.578024, -0.199659, 0.791217, 0.117779, 0.979865, 0.161219, -0.807475, -1.38855e-08, 0.589901, -14.1981, -0.450896, -4.33244)
 
 [node name="Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid2" parent="NonVMF_Entities" instance=ExtResource("8_440db")]
-transform = Transform3D(-0.0471069, 0, -0.99889, 0, 1, 0, -0.99889, 0, 0.0471069, -3.60818, -0.457764, 7.3268)
+transform = Transform3D(0.567226, 0.330322, -0.754416, -0.0681881, 0.931731, 0.35669, -0.820735, 0.150882, -0.551025, 1.34609, 0.0237242, -8.85005)
+
+[node name="Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid2" parent="NonVMF_Entities" instance=ExtResource("9_2sluq")]
+transform = Transform3D(-0.792555, 0, 0.6098, 0, 1, 0, -0.6098, 0, -0.792555, -6.59763, -6.6664, 10.5282)
+skeleton = NodePath("../Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid")
 
 [node name="Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid" parent="NonVMF_Entities" instance=ExtResource("9_2sluq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2134, -3.10889, -16.0428)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49701, -3.10889, 6.34716)
+
+[node name="Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid3" parent="NonVMF_Entities" instance=ExtResource("9_2sluq")]
+transform = Transform3D(0.989576, 0, -0.144011, 0, 1, 0, 0.144011, 0, 0.989576, -21.7211, -9.97143, 0.331605)
+skeleton = NodePath("../Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid")
+
+[node name="Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid4" parent="NonVMF_Entities" instance=ExtResource("9_2sluq")]
+transform = Transform3D(-0.875507, 0, -0.483206, 0, 1, 0, 0.483206, 0, -0.875507, -36.4034, -10.7418, -2.46832)
+skeleton = NodePath("../Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid")
 
 [node name="Campfire_uenpfeifa_Mid" parent="NonVMF_Entities" instance=ExtResource("7_28cqe")]
-transform = Transform3D(0.992623, -0.121246, 0, 0.121246, 0.992623, 0, 0, 0, 1, -8.26067, -0.0622498, -3.1674)
+transform = Transform3D(0.994753, -0.102295, -0.00189157, 0.101611, 0.989917, -0.0986938, 0.0119684, 0.0979837, 0.995116, -8.26067, 0.297775, -3.1674)
+
+[node name="Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid5" parent="NonVMF_Entities" instance=ExtResource("9_2sluq")]
+transform = Transform3D(-0.0304866, 0, -0.999535, 0, 1, 0, 0.999535, 0, -0.0304866, -4.50945, -14.0678, 22.8852)
+skeleton = NodePath("../Massive_Nordic_Coastal_Cliff_vfmjadufa_Mid")
+
+[node name="Huge_Nordic_Coastal_Cliff_ullqbb1ga_Mid3" parent="NonVMF_Entities" instance=ExtResource("8_440db")]
+transform = Transform3D(-0.988051, 0, 0.154124, 0, 1, 0, -0.154124, 0, -0.988051, 7.98386, -0.993757, -0.81684)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NonVMF_Entities"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26067, 0.421619, -3.22251)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26067, 0.813555, -3.22251)
 light_color = Color(1, 0.670588, 0, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -162,8 +179,9 @@ environment = SubResource("Environment_j0key")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813572, 21.76, 4.67515)
 
 [node name="WaterMaker3D" parent="." instance=ExtResource("7_gh7fi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4383, -3.35516, -1.53943)
-size = Vector3(74.3278, 5.61389, 124.502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+size = Vector3(128, 18, 128)
 material = SubResource("StandardMaterial3D_dlxdj")
+water_texture_move_speed = Vector3(0.004, 0.004, 0.004)
 
 [editable path="NavigationRegion3D/VMFNode/Entities/light_environment"]
