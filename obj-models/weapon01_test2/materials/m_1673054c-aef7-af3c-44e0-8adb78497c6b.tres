@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://1vo73hh7lgwv"]
+
+[ext_resource type="Texture2D" uid="uid://brliufau8ub4p" path="res://obj-models/weapon01_test2/basicmetal02.png" id="1_sq86g"]
+
+[resource]
+resource_name = "m_1673054c-aef7-af3c-44e0-8adb78497c6b"
+albedo_texture = ExtResource("1_sq86g")

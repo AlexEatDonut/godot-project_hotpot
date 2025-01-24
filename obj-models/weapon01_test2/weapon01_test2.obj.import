@@ -1,0 +1,61 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cxqpofhs2i6r0"
+path="res://.godot/imported/weapon01_test2.obj-8c14416c24580355fd038975de460f71.scn"
+
+[deps]
+
+source_file="res://obj-models/weapon01_test2/weapon01_test2.obj"
+dest_files=["res://.godot/imported/weapon01_test2.obj-8c14416c24580355fd038975de460f71.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"m_1673054c-aef7-af3c-44e0-8adb78497c6b": {
+"use_external/enabled": true,
+"use_external/path": "res://obj-models/weapon01_test2/materials/m_1673054c-aef7-af3c-44e0-8adb78497c6b.tres"
+},
+"m_2ad658e3-8bc7-975a-1ac6-fcbfe289bcbe": {
+"use_external/enabled": true,
+"use_external/path": "res://obj-models/weapon01_test2/materials/m_2ad658e3-8bc7-975a-1ac6-fcbfe289bcbe.tres"
+},
+"m_3162837b-d553-54d1-38f2-0d386da734ab": {
+"use_external/enabled": true,
+"use_external/path": "res://obj-models/weapon01_test2/materials/m_3162837b-d553-54d1-38f2-0d386da734ab.tres"
+},
+"m_50b08d7d-da1f-cd7c-6460-d7d25198e1cd": {
+"use_external/enabled": true,
+"use_external/path": "res://obj-models/weapon01_test2/materials/m_50b08d7d-da1f-cd7c-6460-d7d25198e1cd.tres"
+},
+"m_6817f8f9-83db-8f18-7c94-e7c8e2b830cb": {
+"use_external/enabled": true,
+"use_external/path": "res://obj-models/weapon01_test2/materials/m_6817f8f9-83db-8f18-7c94-e7c8e2b830cb.tres"
+},
+"none": {
+"use_external/enabled": true,
+"use_external/path": "res://obj-models/weapon01_test2/materials/none.tres"
+}
+}
+}
