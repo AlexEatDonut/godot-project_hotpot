@@ -1,6 +1,6 @@
 # godot-project_hotpot
 
-A first project to get going through godot using GodotVMF and Miyakogames' FPS controller.
+A first project to get going through godot using GodotVMF and Majikayogames' FPS controller.
 Assets might be mine. If they are, they **will** suck.
 
 Assets used on some maps aren't mine.
