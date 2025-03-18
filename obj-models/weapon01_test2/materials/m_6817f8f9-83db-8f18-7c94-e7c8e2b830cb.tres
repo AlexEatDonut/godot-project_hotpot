@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bm3jo8m2i36b7"]
-
-[ext_resource type="Texture2D" uid="uid://iskgq7v22fm8" path="res://obj-models/weapon01_test2/basicplastic01.png" id="1_nitom"]
-
-[resource]
-resource_name = "m_6817f8f9-83db-8f18-7c94-e7c8e2b830cb"
-albedo_texture = ExtResource("1_nitom")

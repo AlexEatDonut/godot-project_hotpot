@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=4 format=3 uid="uid://c4vv7jokxmv73"]
+
+[ext_resource type="ArrayMesh" uid="uid://jygdurrb1bgn" path="res://obj-models/weapon01_test2/weapon01_test2.obj" id="1_5m1g3"]
+[ext_resource type="Script" path="res://entities/weapons/weapon_resource.gd" id="2_dmt2w"]
+[ext_resource type="PackedScene" uid="uid://cgulaqbea2hv" path="res://sounds/weapons/gun_test.tscn" id="3_dfy1c"]
+
+[resource]
+script = ExtResource("2_dmt2w")
+name = &"weapon01_test2"
+damage = 3.0
+weapon_type = &"generic"
+sound = ExtResource("3_dfy1c")
+fire_interval = 0.15
+reload_spd = 1.0
+position = Vector3(0.255, 0.95, -0.635)
+rotation = Vector3(0.08, 0.56, -0.28)
+scale = Vector3(0.4, 0.4, 0.4)
+mesh = ExtResource("1_5m1g3")

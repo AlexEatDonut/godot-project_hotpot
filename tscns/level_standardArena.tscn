@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=4 uid="uid://be5nwrsk17dhn"]
+[gd_scene load_steps=114 format=4 uid="uid://be5nwrsk17dhn"]
 
 [ext_resource type="Script" path="res://addons/godotvmf/utils/VMFNode.gd" id="1_7muby"]
 [ext_resource type="ArrayMesh" uid="uid://cgafs37ci3xcg" path="res://examples/geometry/aed_standardarena_vmf_import.mesh" id="2_oa6jr"]
@@ -11,11 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cwxttgf1xbejo" path="res://examples/entities/light_environment.tscn" id="12_ht21m"]
 [ext_resource type="PackedScene" uid="uid://cx3saydh4cxhk" path="res://examples/entities/func_brush.tscn" id="14_awdci"]
 [ext_resource type="Material" uid="uid://bjrhf6px1waym" path="res://examples/materials/dev/dev_measuregeneric01.tres" id="15_5ejnx"]
-[ext_resource type="PackedScene" uid="uid://dod12a2wormh0" path="res://entities/items/pickups/item_medkit_medium.tscn" id="16_83j2j"]
 [ext_resource type="Material" uid="uid://bkv30owb00i0d" path="res://examples/materials/dev/reflectivity_40.tres" id="16_gcty6"]
-[ext_resource type="PackedScene" uid="uid://4syoa188ad1b" path="res://entities/items/pickups/item_medkit_full.tscn" id="16_owcwn"]
 [ext_resource type="Material" uid="uid://bvuxjor5v4uxg" path="res://examples/materials/dev/reflectivity_20.tres" id="17_6pmdo"]
-[ext_resource type="PackedScene" uid="uid://das7yjx2h1ne8" path="res://entities/items/pickups/item_medkit_small.tscn" id="17_g2grh"]
 [ext_resource type="PackedScene" uid="uid://datcydt1gx3u0" path="res://entities/npcs/npc_badguy.tscn" id="18_76cwh"]
 [ext_resource type="PackedScene" uid="uid://f6kx848g5bco" path="res://FPSController/FPSController.tscn" id="18_ycbl3"]
 [ext_resource type="PackedScene" uid="uid://ca0wevg1lb4rx" path="res://utils/WaterMaker3D/WaterMaker3D.tscn" id="19_kqiux"]
@@ -979,12 +976,12 @@ points = PackedVector3Array(-5.8401, 6.4, -25.28, -5.8401, 6.48, -25.28, -1.7604
 sky_top_color = Color(0.529412, 0.67451, 0.705882, 1)
 sky_horizon_color = Color(0.921569, 0.65098, 0.278431, 1)
 
-[sub_resource type="Sky" id="Sky_hx34s"]
+[sub_resource type="Sky" id="Sky_gv1mi"]
 sky_material = SubResource("ProceduralSkyMaterial_185sa")
 
 [sub_resource type="Environment" id="Environment_1i6xn"]
 background_mode = 2
-sky = SubResource("Sky_hx34s")
+sky = SubResource("Sky_gv1mi")
 ssao_enabled = true
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
@@ -1054,6 +1051,7 @@ shape = ExtResource("3_m4k3v")
 [node name="Models" type="Node3D" parent="NavigationRegion3D/VMFNode"]
 
 [node name="Entities" type="Node3D" parent="NavigationRegion3D/VMFNode"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0623611, -1.90735e-06, -0.00243378)
 
 [node name="func_detail_7614" parent="NavigationRegion3D/VMFNode/Entities" instance=ExtResource("4_c0igs")]
 entity = {
@@ -51949,7 +51947,7 @@ environment = SubResource("Environment_1i6xn")
 [node name="NonVMF_Entities" type="Node3D" parent="."]
 
 [node name="Ladder" type="Node3D" parent="NonVMF_Entities"]
-transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -7.41917, 0.122382, -20.5441)
+transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -7.51959, -0.0471813, -20.5257)
 
 [node name="LadderVisual" type="Node3D" parent="NonVMF_Entities/Ladder"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
@@ -52013,20 +52011,11 @@ shape = SubResource("BoxShape3D_youqv")
 [node name="TopOfLadder" type="Node3D" parent="NonVMF_Entities/Ladder/LadderArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.599998, 6.28164, 0)
 
-[node name="item_medkit_medium2" parent="NonVMF_Entities" instance=ExtResource("16_owcwn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.32886, -1.25276, -1.74978)
-
-[node name="item_medkit_medium" parent="NonVMF_Entities" instance=ExtResource("16_83j2j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.32886, -1.25276, 1.25022)
-
-[node name="item_medkit_medium3" parent="NonVMF_Entities" instance=ExtResource("17_g2grh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.32886, -1.25276, 4.25022)
-
 [node name="npc_badguy" parent="." instance=ExtResource("18_76cwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76769, -0.257344, -3.55336)
 
 [node name="WaterMaker3D" parent="." instance=ExtResource("19_kqiux")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0222681, 0.572498, -37.7042)
+transform = Transform3D(1, 0, 0, 0, 0.999984, -0.00567229, 0, 0.00567229, 0.999984, 0.0222681, 0.572498, -37.7042)
 size = Vector3(6.67395, 1.145, 6.83536)
 material = SubResource("StandardMaterial3D_a05gy")
 

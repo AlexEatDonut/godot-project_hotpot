@@ -1,8 +1,8 @@
 # Made in Blockbench 4.12.2
-newmtl m_50b08d7d-da1f-cd7c-6460-d7d25198e1cd
-map_Kd heatsink.png
 newmtl m_1673054c-aef7-af3c-44e0-8adb78497c6b
 map_Kd basicmetal02.png
+newmtl m_50b08d7d-da1f-cd7c-6460-d7d25198e1cd
+map_Kd heatsink.png
 newmtl m_3162837b-d553-54d1-38f2-0d386da734ab
 map_Kd gunhole.png
 newmtl m_2ad658e3-8bc7-975a-1ac6-fcbfe289bcbe
